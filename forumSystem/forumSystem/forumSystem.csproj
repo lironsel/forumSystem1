@@ -70,6 +70,7 @@
     <Compile Include="model\Rule.cs" />
     <Compile Include="model\SubForum.cs" />
     <Compile Include="model\Thread.cs" />
+    <Compile Include="model\Title.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="model\User.cs" />
