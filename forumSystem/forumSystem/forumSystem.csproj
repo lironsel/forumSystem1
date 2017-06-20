@@ -52,12 +52,28 @@
     <Compile Include="ForumSystem.Designer.cs">
       <DependentUpon>ForumSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\ActionLogger.cs" />
     <Compile Include="model\Admin.cs" />
+    <Compile Include="model\Administrative.cs" />
+    <Compile Include="model\Complaints.cs" />
+    <Compile Include="model\Content.cs" />
+    <Compile Include="model\ErrorLogger.cs" />
     <Compile Include="model\Complaint.cs" />
     <Compile Include="model\Forum.cs" />
+    <Compile Include="model\Group.cs" />
     <Compile Include="model\friendRequest.cs" />
     <Compile Include="model\Guest.cs" />
+    <Compile Include="model\Logger.cs" />
+    <Compile Include="model\invitation.cs" />
+    <Compile Include="model\Message.cs" />
     <Compile Include="model\Moderator.cs" />
+    <Compile Include="model\Notification.cs" />
+    <Compile Include="model\Policy.cs" />
+    <Compile Include="model\Rule.cs" />
+    <Compile Include="model\Security.cs" />
+    <Compile Include="model\SubForum.cs" />
+    <Compile Include="model\Thread.cs" />
+    <Compile Include="model\Title.cs" />
     <Compile Include="model\ThreadMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

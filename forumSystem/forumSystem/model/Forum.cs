@@ -21,7 +21,7 @@ namespace forumSystem.model
         public void searchForum(String forumID) { }
         public void searchSubForum(String subForumID) { }
         public void getModertors(String forumID, String subForumID) { }
-        public void searchSubForum(String subForumID) { }
+        //public void searchSubForum(String subForumID) { }
         public void deleteModerator(String forumID, String subForumID, String moderatorID) { }
         public void createOpeningMessage(String forumID, String subforumID, String threadID, String message, user) { }
         public void createMessage(String message) { }
