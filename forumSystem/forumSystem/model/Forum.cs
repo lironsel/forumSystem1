@@ -11,7 +11,7 @@ namespace forumSystem.model
         Policy contains1;
         ErrorLogger reports1;
         ActionLogger reports2;
-        List<loginWindow> login_user;
+        //List<loginWindow> login_user;
         List<SubForum> contains;
         List<Admin> managed;
         List<User> member;
