@@ -14,8 +14,8 @@ namespace forumSystem.model
         User posted_by;
         Content contains2;
         ThreadMessage replied_on;
-        Collection<ThreadMessage> commented_on_it;
-        private Date CreateDate;
+        List<ThreadMessage> commented_on_it;
+        private DateTime CreateDate;
 
         public void createThreadMessage() { }
         public String getMessageRepliedOn() { return ""; }
