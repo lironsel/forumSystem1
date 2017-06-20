@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="model\ActionLogger.cs" />
     <Compile Include="model\Admin.cs" />
+    <Compile Include="model\Administrative.cs" />
     <Compile Include="model\Forum.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Moderator.cs" />
