@@ -65,6 +65,7 @@
     <Compile Include="model\invitation.cs" />
     <Compile Include="model\Message.cs" />
     <Compile Include="model\Moderator.cs" />
+    <Compile Include="model\Notification.cs" />
     <Compile Include="model\SubForum.cs" />
     <Compile Include="model\Thread.cs" />
     <Compile Include="Program.cs" />
