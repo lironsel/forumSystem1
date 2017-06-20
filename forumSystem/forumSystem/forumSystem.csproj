@@ -67,6 +67,7 @@
     <Compile Include="model\Moderator.cs" />
     <Compile Include="model\Notification.cs" />
     <Compile Include="model\Policy.cs" />
+    <Compile Include="model\Rule.cs" />
     <Compile Include="model\SubForum.cs" />
     <Compile Include="model\Thread.cs" />
     <Compile Include="Program.cs" />
