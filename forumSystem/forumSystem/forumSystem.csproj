@@ -62,6 +62,7 @@
     <Compile Include="model\Group.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Logger.cs" />
+    <Compile Include="model\Message.cs" />
     <Compile Include="model\Moderator.cs" />
     <Compile Include="model\SubForum.cs" />
     <Compile Include="model\Thread.cs" />
