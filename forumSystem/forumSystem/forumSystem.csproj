@@ -59,7 +59,9 @@
     <Compile Include="model\Content.cs" />
     <Compile Include="model\ErrorLogger.cs" />
     <Compile Include="model\Forum.cs" />
+    <Compile Include="model\Group.cs" />
     <Compile Include="model\Guest.cs" />
+    <Compile Include="model\Logger.cs" />
     <Compile Include="model\invitation.cs" />
     <Compile Include="model\Moderator.cs" />
     <Compile Include="model\SubForum.cs" />
