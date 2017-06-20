@@ -57,6 +57,7 @@
     <Compile Include="model\Administrative.cs" />
     <Compile Include="model\Complaints.cs" />
     <Compile Include="model\Content.cs" />
+    <Compile Include="model\ErrorLogger.cs" />
     <Compile Include="model\Forum.cs" />
     <Compile Include="model\Group.cs" />
     <Compile Include="model\Guest.cs" />
