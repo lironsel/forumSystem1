@@ -53,9 +53,12 @@
       <DependentUpon>ForumSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Admin.cs" />
+    <Compile Include="model\Complaint.cs" />
     <Compile Include="model\Forum.cs" />
+    <Compile Include="model\friendRequest.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Moderator.cs" />
+    <Compile Include="model\ThreadMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="model\User.cs" />
