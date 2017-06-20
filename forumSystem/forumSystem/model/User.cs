@@ -29,5 +29,31 @@ namespace forumSystem
             m_name = name;
             m_password = password;
         }
-    }
+
+        public void creatInvitation() { }
+        public void updateMessage(String messageID, String newContent, String newTitle) { }
+        public void changeContent(String newContent) { }
+        public void changeTitle(String newTitle) { }
+        public void changeCreateDateTonow() { }
+        public void suspendUser(String userID) { }
+        //private void user = findUser(String userID){}
+        public void changePermissionToConnect(bool change) { }
+        public void active(bool active) { }
+        public void addToUsers() { }
+        public void closeGuest() { }
+        public void addMessageToOutbox(String content) { }
+        public void addMessageToUserInbox(String contant, String senderID) { }
+        public void getUser(String userID) { }
+        //public void getUser(String userInviteID) { }
+        public void searchUser(String user) { }
+        public void changeStatusToActive(String UserID) { }
+        public void changeStatus(bool change) { }
+        public void chackIfPassword(String password) { }
+        public void ActiveUser() { }
+        public void bottunSendMessage(String userID) { }
+        public void addInvitation() { }
+        public void addComplaint(String complaintID, String user1, String user2) { }
+        public void getComplaintAbout() { }
+
+}
 }
