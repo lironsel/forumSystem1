@@ -53,6 +53,7 @@
       <DependentUpon>ForumSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Admin.cs" />
+    <Compile Include="model\Forum.cs" />
     <Compile Include="model\Guest.cs" />
     <Compile Include="model\Moderator.cs" />
     <Compile Include="Program.cs" />
