@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
@@ -11,7 +8,8 @@ namespace forumSystem.model
         List<SubForum> monitoring;
         List<Complaint> referred_to;
         private double seniority;
-
+        public Moderator(string name, string password) : base(name, password)
+        { }
 
         public void getModerator() { }
         public void searchModeator(String moderatorID) { }

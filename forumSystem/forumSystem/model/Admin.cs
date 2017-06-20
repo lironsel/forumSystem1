@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace forumSystem.model
 {
-    class Admin
+    class Admin : User
     {
         List<Forum> admin;
+        public Admin(string name, string password) : base(name, password) { }
     }
 }

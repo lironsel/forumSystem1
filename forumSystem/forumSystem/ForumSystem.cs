@@ -4,7 +4,7 @@ namespace forumSystem
 {
     public partial class ForumSystem : Form
     {
-        private static ForumSystem instance;
+        private static ForumSystem instance = null;
 
         private ForumSystem()
         {
