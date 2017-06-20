@@ -1,6 +1,6 @@
 ﻿namespace forumSystem
 {
-    partial class Form1
+    partial class ForumSystem
     {
         /// <summary>
         /// Required designer variable.
