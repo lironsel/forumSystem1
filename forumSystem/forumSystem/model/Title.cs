@@ -8,10 +8,8 @@ namespace forumSystem.model
 {
     class Title
     {
-
         ThreadMessage assembling;
-        private String title;
+        private string title;
         public void putTitle() { }
-
     }
 }

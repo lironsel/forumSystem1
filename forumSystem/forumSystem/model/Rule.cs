@@ -9,6 +9,6 @@ namespace forumSystem.model
     class Rule
     {
         Policy assembling;
-        private String rule;
+        private string rule;
     }
 }

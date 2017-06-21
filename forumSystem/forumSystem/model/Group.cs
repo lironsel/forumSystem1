@@ -13,7 +13,7 @@ namespace forumSystem.model
         List<invitation> Invite;
         List<IObserver> existent;
         public void getUsers() { }
-        public void findGroup(String groupID) { }
+        public void findGroup(string groupID) { }
         public void getGroup() { }
         public void addToGroup() { }
 

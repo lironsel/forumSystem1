@@ -5,23 +5,30 @@ namespace forumSystem.model
 {
     class Forum
     {
-        Policy contains1;
-        ErrorLogger reports1;
-        ActionLogger reports2;
+        string name;
+        Policy policy;
+        ErrorLogger errLoger;
+        ActionLogger actionLogger;
         //List<loginWindow> login_user;
-        List<SubForum> contains;
-        List<Admin> managed;
-        List<User> member;
-        List<Group> contains2;
+        List<SubForum> subForums;
+        List<Admin> admins;
 
-        public void newDiscussion(String forumID, String subForumID, String subject, User user) { }
-        public void searchForum(String forumID) { }
-        public void searchSubForum(String subForumID) { }
-        public void getModertors(String forumID, String subForumID) { }
+        internal string getName()
+        {
+            return name;
+        }
+
+        List<User> users;
+        List<Group> contains;
+
+        public void newDiscussion(string forumID, string subForumID, string subject, User user) { }
+        public void searchForum(string forumID) { }
+        public void searchSubForum(string subForumID) { }
+        public void getModertors(string forumID, string subForumID) { }
         //public void searchSubForum(String subForumID) { }
-        public void deleteModerator(String forumID, String subForumID, String moderatorID) { }
-        public void createOpeningMessage(String forumID, String subforumID, String threadID, String message, User user) { }
-        public void createMessage(String message) { }
+        public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
+        public void createOpeningMessage(string forumID, string subforumID, string threadID, string message, User user) { }
+        public void createMessage(string message) { }
         public void ButtonGoToConnectWindow() { }
         public void create_LW() { }
         public void loginGuest() { }

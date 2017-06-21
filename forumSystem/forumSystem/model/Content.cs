@@ -8,8 +8,12 @@ namespace forumSystem.model
 {
     class Content
     {
-        ThreadMessage assembling2;
-        private String contents;
-        public void putContent(String content) { }
+        ThreadMessage assembling;
+        private string content;
+
+        public void putContent(string content)
+        {
+            this.content = content;
+        }
     }
 }

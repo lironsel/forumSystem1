@@ -8,7 +8,6 @@ namespace forumSystem.model
 {
     class ThreadMessage
     {
-
         Thread assembling;
         Title contains;
         IObserver posted_by;
@@ -21,6 +20,7 @@ namespace forumSystem.model
         {
 
         }
-        public String getMessageRepliedOn() { return ""; }
+
+        public string getMessageRepliedOn() { return ""; }
     }
 }

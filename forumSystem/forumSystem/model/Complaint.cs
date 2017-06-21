@@ -10,8 +10,8 @@ namespace forumSystem.model
     {
         Moderator refers_to;
         User submitted_by;
-        private String complaint;
+        private string complaint;
 
-        public void createComplaint(String complaintID, String user1, String user2) { }
+        public void createComplaint(string complaintID, User submittedBy, string moderator) { }
     }
 }

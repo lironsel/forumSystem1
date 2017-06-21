@@ -4,7 +4,14 @@ namespace forumSystem.model
 {
     class Logger
     {
-        private String log;
+        private string log;
+        private string path;
+
+        public Logger(string path)
+        {
+            this.path = path;
+            log = "";
+        }
 
         public void Log(string data)
         {

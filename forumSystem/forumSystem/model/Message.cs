@@ -10,9 +10,9 @@ namespace forumSystem.model
     {
         User sent_by;
         Group assembling;
-        private String message;
+        private string message;
 
-        public void sendMessage(String content, String senderID, String groupID) { }
-        public void createMessageTamplet(String userID) { }
+        public void sendMessage(string content, string senderID, string groupID) { }
+        public void createMessageTamplet(string userID) { }
     }
 }

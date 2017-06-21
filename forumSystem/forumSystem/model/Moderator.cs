@@ -12,7 +12,7 @@ namespace forumSystem.model
         { }
 
         public void getModerator() { }
-        public void searchModeator(String moderatorID) { }
+        public void searchModeator(string moderatorID) { }
 
         public override bool visit(Moderator moderator)
         {

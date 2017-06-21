@@ -13,7 +13,7 @@ namespace forumSystem.model
         Group invites_to;
 
 
-        public void inviate_addFrind(String userInviteID, String userInvitedID) { }
+        public void inviate_addFrind(string userInviteID, string userInvitedID) { }
         public void creatInvitation() { }
     }
 }
