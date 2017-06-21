@@ -8,13 +8,15 @@ namespace forumSystem.model
 {
     class Notification
     {
-        User sent_to;
-        DateTime date;
-        string data;
+        User _sent_to;
+        DateTime _date;
+        string _data;
 
         public Notification(User user, string data)
         {
-
+            _sent_to = user;
+            _date = DateTime.Now;
+            _data = data;
         }
     }
 }

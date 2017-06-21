@@ -11,9 +11,12 @@ namespace forumSystem.model
         SubForum assembling;
         List<ThreadMessage> contains;
         List<User> observers;
-        public void connectDisToUser(String user) { }
+        public void connectDisToUser(string user) { }
         public void searchThread(String ThreadID) { }
-        public void addResponseMessage(String content, String title, String userID) { }
+        public void addResponseMessage(string content, String title, IObserver user, ThreadMessage repliedOn = null)
+        {
+            contains.Add(new ThreadMessage(this, title, user, content, repliedOn));
+        }
         public void changeCommentedOn(bool change) { }
 
         public void addObserver(IObserver observer)

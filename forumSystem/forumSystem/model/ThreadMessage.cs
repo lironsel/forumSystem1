@@ -11,13 +11,16 @@ namespace forumSystem.model
 
         Thread assembling;
         Title contains;
-        User posted_by;
+        IObserver posted_by;
         Content contains2;
         ThreadMessage replied_on;
         List<ThreadMessage> commented_on_it;
         private DateTime CreateDate;
 
-        public void createThreadMessage() { }
+        public ThreadMessage(Thread belongsTo, string title, IObserver postedBy, string content, ThreadMessage repliedOn)
+        {
+
+        }
         public String getMessageRepliedOn() { return ""; }
     }
 }
