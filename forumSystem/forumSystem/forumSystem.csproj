@@ -63,6 +63,8 @@
     <Compile Include="model\Group.cs" />
     <Compile Include="model\friendRequest.cs" />
     <Compile Include="model\Guest.cs" />
+    <Compile Include="model\IObserveable.cs" />
+    <Compile Include="model\IObserver.cs" />
     <Compile Include="model\Logger.cs" />
     <Compile Include="model\invitation.cs" />
     <Compile Include="model\Message.cs" />

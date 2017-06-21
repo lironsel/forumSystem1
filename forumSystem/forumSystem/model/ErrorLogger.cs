@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class ErrorLogger
+    class ErrorLogger : Logger
     {
         Forum belong_to1;
     }

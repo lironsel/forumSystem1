@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    interface Visitor
+    public interface Visitor
     {
         bool visit(Admin admin);
         bool visit(User user);

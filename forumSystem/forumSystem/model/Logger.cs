@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
     class Logger
     {
         private String log;
+
+        public void Log(string data)
+        {
+            log += ("[" + DateTime.Now + "] " + data + "\n");
+        }
     }
 }

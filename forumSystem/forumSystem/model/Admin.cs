@@ -2,7 +2,7 @@
 
 namespace forumSystem.model
 {
-    class Admin : User
+    public class Admin : User
     {
         List<Forum> admin;
         public Admin(string name, string password) : base(name, password) { }
@@ -12,14 +12,19 @@ namespace forumSystem.model
             return false;
         }
 
-        public override bool visit(User user)
-        {
-            return false;
-        }
+        //public override bool visit(User user)
+        //{
+        //    return false;
+        //}
 
         public override bool visit(Admin admin)
         {
             return false;
+        }
+
+        public override void accept(Visitor v)
+        {
+            v.visit(this);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    interface Visited
+    public interface Visited
     {
         void accept(Visitor v);
     }

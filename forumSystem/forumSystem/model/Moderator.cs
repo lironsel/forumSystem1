@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace forumSystem.model
 {
-    class Moderator : User, Visitor, Visited
+    public class Moderator : User
     {
         List<SubForum> monitoring;
         List<Complaint> referred_to;
@@ -19,14 +19,19 @@ namespace forumSystem.model
             return false;
         }
 
-        public override bool visit(User user)
-        {
-            return false;
-        }
+        //public override bool visit(User user)
+        //{
+        //    return false;
+        //}
 
-        public override bool visit(Admin admin)
+        //public override bool visit(Admin admin)
+        //{
+        //    return true;
+        //}
+
+        public override void accept(Visitor v)
         {
-            return true;
+            v.visit(this);
         }
     }
 }
