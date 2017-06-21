@@ -13,7 +13,7 @@ namespace forumSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ForumSystem());
+            Application.Run(ForumSystem.Instance);
         }
     }
 }

@@ -9,6 +9,5 @@ namespace forumSystem.model
     class ActionLogger
     {
         Forum belong_to2;
-
     }
 }
