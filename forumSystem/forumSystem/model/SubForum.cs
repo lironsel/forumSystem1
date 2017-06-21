@@ -10,13 +10,26 @@ namespace forumSystem.model
     {
         Forum assembling;
         List<Thread> contains;
-        List<Moderator> moderated;
+        List<Moderator> moderators;
         private string subject;
 
-        public void createThread(String subject, String contant) { }
-        public void connectDisToUser(String user, String dis) { }
+        public SubForum(Forum belongsTo, string subject, Moderator moderator)
+        {
+            assembling = belongsTo;
+            this.subject = subject;
+            contains = new List<Thread>();
+            moderators = new List<Moderator>();
+            moderators.Add(moderator);
+        }
+
+        public void createThread(string title, string content, IObserver postedBy)
+        {
+            contains.Add(new Thread(this, postedBy, title, content));
+        }
+
+        public void connectDisToUser(string user, string dis) { }
         public void getModerator() { }
-        public void searchModeator(String moderatorID) { }
-        public void searchThread(String ThreadID) { }
+        public void searchModeator(string moderatorID) { }
+        public void searchThread(string ThreadID) { }
     }
 }

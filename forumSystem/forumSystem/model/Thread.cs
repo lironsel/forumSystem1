@@ -10,23 +10,43 @@ namespace forumSystem.model
     {
         SubForum assembling;
         List<ThreadMessage> contains;
-        List<User> observers;
+        List<IObserver> observers;
+
+        public Thread(SubForum belongsTo, IObserver user, string title, string content)
+        {
+            assembling = belongsTo;
+            contains = new List<ThreadMessage>();
+            contains.Add(new ThreadMessage(this, title, user, content, null));
+            observers = new List<IObserver>();
+            observers.Add(user);
+        }
+
         public void connectDisToUser(string user) { }
-        public void searchThread(String ThreadID) { }
-        public void addResponseMessage(string content, String title, IObserver user, ThreadMessage repliedOn = null)
+        public void searchThread(string ThreadID) { }
+        public void addResponseMessage(string content, string title, IObserver user, ThreadMessage repliedOn = null)
         {
             contains.Add(new ThreadMessage(this, title, user, content, repliedOn));
+            addObserver(user);
         }
+
         public void changeCommentedOn(bool change) { }
 
         public void addObserver(IObserver observer)
         {
-            throw new NotImplementedException();
+            if (!observers.Contains(observer))
+            {
+                observers.Add(observer);
+            }
+            else Console.WriteLine("ERROR - USERS IS ALREADY AN OBSERVER"); //TODO: change to error logger
         }
 
         public void removeObserver(IObserver observer)
         {
-            throw new NotImplementedException();
+            if (observers.Contains(observer))
+            {
+                observers.Remove(observer);
+            }
+            else Console.WriteLine("ERROR - USERS IS NOT AN OBSERVER AND CANNOT BE REMOVED"); //TODO: change to error logger
         }
     }
 }
