@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem
 {
-    class User : Guest
+    class User : Guest, IObserver
     {
         //Forum signedUp;
         List<Complaint> complain;
@@ -55,5 +55,9 @@ namespace forumSystem
         public void addComplaint(String complaintID, String user1, String user2) { }
         public void getComplaintAbout() { }
 
-}
+        public void notify(string data)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

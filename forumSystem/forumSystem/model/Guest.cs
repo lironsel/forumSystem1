@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    abstract class Guest
+    public class Guest
     {
     }
 }

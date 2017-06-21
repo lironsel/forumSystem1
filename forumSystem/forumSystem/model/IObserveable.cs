@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class ActionLogger : Logger
+    interface IObserveable
     {
-        Forum belong_to2;
+        void addObserver(IObserver observer);
+        void removeObserver(IObserver observer);
     }
 }

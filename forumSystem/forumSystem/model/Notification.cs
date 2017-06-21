@@ -8,11 +8,13 @@ namespace forumSystem.model
 {
     class Notification
     {
+        User sent_to;
+        DateTime date;
+        string data;
 
-        List<User> sent_to;
-        private DateTime date;
+        public Notification(User user, string data)
+        {
 
-
-        public void createNotificuition() { }
+        }
     }
 }
