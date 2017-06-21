@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem
 {
-    class User : Guest
+    class User : Guest, Visitor, Visited
     {
         //Forum signedUp;
         List<Complaint> complain;
@@ -54,6 +54,20 @@ namespace forumSystem
         public void addInvitation() { }
         public void addComplaint(String complaintID, String user1, String user2) { }
         public void getComplaintAbout() { }
+        
+        public override bool visit(Moderator moderator)
+        {
+            return true;
+        }
 
-}
+        public override bool visit(User user)
+        {
+            return false;
+        }
+
+        public override bool visit(Admin admin)
+        {
+            return true;
+        }
+    }
 }
