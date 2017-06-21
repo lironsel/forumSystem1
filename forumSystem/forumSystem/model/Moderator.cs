@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace forumSystem.model
 {
-    class Moderator : User
+    public class Moderator : User
     {
         List<SubForum> monitoring;
         List<Complaint> referred_to;
@@ -13,5 +13,25 @@ namespace forumSystem.model
 
         public void getModerator() { }
         public void searchModeator(String moderatorID) { }
+
+        public override bool visit(Moderator moderator)
+        {
+            return false;
+        }
+
+        //public override bool visit(User user)
+        //{
+        //    return false;
+        //}
+
+        //public override bool visit(Admin admin)
+        //{
+        //    return true;
+        //}
+
+        public override void accept(Visitor v)
+        {
+            v.visit(this);
+        }
     }
 }
