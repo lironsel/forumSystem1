@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace forumSystem.model
 {
-    class Forum
+    public class Forum
     {
         string name;
         Policy policy;

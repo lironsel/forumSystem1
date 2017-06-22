@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class Administrative
+    class Administrative : Rule
     {
     }
 }

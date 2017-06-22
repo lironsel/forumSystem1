@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class Rule
+    abstract class Rule
     {
         Policy assembling;
         private string rule;

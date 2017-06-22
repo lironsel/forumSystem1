@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
+    <Compile Include="Model\Complaints.cs" />
+    <Compile Include="Model\Model.cs" />
     <Compile Include="View\ForumSystem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,7 +63,6 @@
     <Compile Include="Model\ActionLogger.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Administrative.cs" />
-    <Compile Include="Model\Complaints.cs" />
     <Compile Include="Model\Content.cs" />
     <Compile Include="Model\ErrorLogger.cs" />
     <Compile Include="Model\Complaint.cs" />

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using forumSystem.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace forumSystem.model
+namespace forumSystem.Model
 {
-    class Security : Rule
+    class Complaints : Rule
     {
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forumSystem.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,7 @@ namespace forumSystem.Controller
     {
         void SignUp(string email, string password, string name, string birthday, string sex);
         string getConecteduser();
+        List<Forum> getForums();
+        List<SubForum> enterForum(string forumName);
     }
 }

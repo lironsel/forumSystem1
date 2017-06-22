@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class SubForum
+    public class SubForum
     {
         Forum assembling;
         List<Thread> contains;
