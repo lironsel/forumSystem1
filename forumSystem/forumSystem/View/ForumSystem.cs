@@ -18,6 +18,11 @@ namespace forumSystem
             InitializeComponent();
         }
 
+        public void setControl(IController controller)
+        {
+            myControl = controller;
+        }
+
         public static ForumSystem Instance
         {
             get
@@ -48,6 +53,11 @@ namespace forumSystem
                     panel.Controls.Add(new LogInPanel(myControl));
                     logInButton.Checked = true;
                     break;
+                case "About":
+                    clearPanels(userChoose);
+                    panel.Controls.Add(new AboutPanel());
+                    aboutButton.Checked = true;
+                    break;
                     /*case "Search Partners":
                         if (!logged)
                         {
@@ -63,11 +73,7 @@ namespace forumSystem
                         break;
                    
                     
-                    case "About":
-                        clearPanels(userChoose);
-                        panel.Controls.Add(new AboutPanel());
-                        aboutButton.Checked = true;
-                        break;
+                    
 
                     case "My Groups":
                         if (!logged)

@@ -73,7 +73,7 @@ namespace forumSystem.View
                 //sub forums list
                 case 1:
                     subForumName = selectedItem;
-                    //addListToListBox(myControl.(forumName, subForumName)); enter sub forum
+                    addListToListBox(myControl.enterSubForum(forumName, subForumName));
                     list_lbl.Text = forumName+"\\"+subForumName;
                     label1.Text = "Choose thread and press 'Show' ";
                     addThread_btn.Visible = true;

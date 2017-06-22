@@ -53,6 +53,12 @@
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Model\Complaints.cs" />
+    <Compile Include="View\AboutPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AboutPanel.Designer.cs">
+      <DependentUpon>AboutPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ForumsList.cs">
       <SubType>UserControl</SubType>
     </Compile>

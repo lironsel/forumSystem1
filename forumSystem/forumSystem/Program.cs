@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using forumSystem.Controller;
+using forumSystem.Model;
 
 namespace forumSystem
 {
@@ -14,7 +16,10 @@ namespace forumSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(ForumSystem.Instance);
+            IController controller = new MyController();
+            ForumSystem fs = ForumSystem.Instance;
+            fs.setControl(controller);
+            Application.Run(fs);
         }
     }
 }
