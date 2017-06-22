@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class ThreadMessage
+    public class ThreadMessage
     {
         Thread assembling;
         string title;
@@ -27,6 +27,31 @@ namespace forumSystem.model
             commented_on_it = new List<ThreadMessage>();
         }
 
-        public string getMessageRepliedOn() { return ""; }
+        public string getMessageRepliedOn() { return replied_on.title; }
+
+        internal string getPublishDate()
+        {
+            return createDate.ToString();
+        }
+
+        internal string getPublisher()
+        {
+            return posted_by.getName();
+        }
+
+        internal string getTitle()
+        {
+            return title;
+        }
+
+        internal string getMessage()
+        {
+            return content;
+        }
+
+        internal string getFeedbacks()
+        {
+            return commented_on_it.Count.ToString();
+        }
     }
 }

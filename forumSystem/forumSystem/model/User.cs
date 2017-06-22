@@ -78,5 +78,10 @@ namespace forumSystem
         {
             v.visit(this);
         }
+
+        public string getName()
+        {
+            return m_name;
+        }
     }
 }

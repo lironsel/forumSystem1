@@ -30,7 +30,14 @@ namespace forumSystem.model
         public void connectDisToUser(string user, string dis) { }
         public void getModerator() { }
         public void searchModeator(string moderatorID) { }
-        public void searchThread(string ThreadID) { }
+        public Thread searchThread(string ThreadID)
+        {
+            if (threads.ContainsKey(ThreadID))
+            {
+                return threads[ThreadID];
+            }
+            else return null;
+        }
 
         internal List<string> getThreads()
         {

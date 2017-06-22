@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace forumSystem.Model
 {
@@ -56,6 +57,36 @@ namespace forumSystem.Model
                 return currentSubForum.getThreads();
             }
             else return null;
+        }
+
+        internal DataTable enterThread(string forumName, string subForumName, string threadName)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("Publish Date");
+            table.Columns.Add("Publisher");
+            table.Columns.Add("Title");
+            table.Columns.Add("Message");
+            table.Columns.Add("Feedbacks");
+            try
+            {
+                Forum forum = forums[forumName];
+                SubForum SubForum = forum.searchSubForum(subForumName);
+                Thread thread = SubForum.searchThread(threadName);
+                List<ThreadMessage> messages = thread.getMessages();
+                foreach (ThreadMessage message in messages)
+                {
+                    DataRow row = table.NewRow();
+                    row["Publish Date"] = message.getPublishDate();
+                    row["Publisher"] = message.getPublisher();
+                    row["Title"] = message.getTitle();
+                    row["Message"] = message.getMessage();
+                    row["Feedbacks"] = message.getFeedbacks();
+                    table.Rows.Add(row);
+                }
+            }
+            catch(Exception ex) { return null; }
+        
+            return table;
         }
 
         internal List<string> getForums()
