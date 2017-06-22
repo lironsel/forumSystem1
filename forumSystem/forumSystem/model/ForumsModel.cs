@@ -47,6 +47,17 @@ namespace forumSystem.Model
             }
         }
 
+        internal List<string> enterSubForum(string forumName, string subForumName)
+        {
+            if (forums.ContainsKey(forumName))
+            {
+                Forum currentForum = forums[forumName];
+                SubForum currentSubForum = currentForum.searchSubForum(subForumName);
+                return currentSubForum.getThreads();
+            }
+            else return null;
+        }
+
         internal List<string> getForums()
         {
             List<string> forumNames = new List<string>();

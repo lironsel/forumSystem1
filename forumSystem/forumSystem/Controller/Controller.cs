@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using forumSystem.model;
 using forumSystem.Model;
+using System.Data;
 
 namespace forumSystem.Controller
 {
@@ -32,6 +33,18 @@ namespace forumSystem.Controller
         public void SignUp(string email, string password, string name, string birthday, string sex)
         {
             throw new NotImplementedException();
+        }
+
+        public List<string> enterSubForum(string forumName, string subForumName)
+        {
+            return model.enterSubForum(forumName, subForumName);
+        }
+
+        public DataTable enterThread(string forumName, string subForumName, string threadName)
+        {
+            DataTable table = new DataTable();
+
+            return table;
         }
     }
 }
