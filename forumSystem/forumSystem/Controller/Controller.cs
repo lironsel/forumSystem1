@@ -42,9 +42,7 @@ namespace forumSystem.Controller
 
         public DataTable enterThread(string forumName, string subForumName, string threadName)
         {
-            DataTable table = new DataTable();
-
-            return table;
+            return model.enterThread(forumName, subForumName, threadName);
         }
     }
 }

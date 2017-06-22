@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    class Thread : IObserveable
+    public class Thread : IObserveable
     {
         SubForum assembling;
-        List<ThreadMessage> contains;
+        List<ThreadMessage> messages;
         List<IObserver> observers;
 
         public Thread(SubForum belongsTo, IObserver user, string title, string content)
         {
             assembling = belongsTo;
-            contains = new List<ThreadMessage>();
-            contains.Add(new ThreadMessage(this, title, user, content, null));
+            messages = new List<ThreadMessage>();
+            messages.Add(new ThreadMessage(this, title, user, content, null));
             observers = new List<IObserver>();
             observers.Add(user);
         }
@@ -25,7 +25,7 @@ namespace forumSystem.model
         public void searchThread(string ThreadID) { }
         public void addResponseMessage(string content, string title, IObserver user, ThreadMessage repliedOn = null)
         {
-            contains.Add(new ThreadMessage(this, title, user, content, repliedOn));
+            messages.Add(new ThreadMessage(this, title, user, content, repliedOn));
             addObserver(user);
         }
 
@@ -47,6 +47,11 @@ namespace forumSystem.model
                 observers.Remove(observer);
             }
             else Console.WriteLine("ERROR - USERS IS NOT AN OBSERVER AND CANNOT BE REMOVED"); //TODO: change to error logger
+        }
+
+        internal List<ThreadMessage> getMessages()
+        {
+            return messages;
         }
     }
 }

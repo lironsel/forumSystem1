@@ -3,5 +3,6 @@
     public interface IObserver
     {
         void notify(string data);
+        string getName();
     }
 }
