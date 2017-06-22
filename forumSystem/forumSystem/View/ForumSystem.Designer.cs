@@ -36,9 +36,6 @@ namespace forumSystem
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.SignUpButton = new System.Windows.Forms.ToolStripButton();
             this.logInButton = new System.Windows.Forms.ToolStripButton();
-            this.searchButton = new System.Windows.Forms.ToolStripButton();
-            this.createGroupButton = new System.Windows.Forms.ToolStripButton();
-            this.groupsButton = new System.Windows.Forms.ToolStripButton();
             this.aboutButton = new System.Windows.Forms.ToolStripButton();
             this.logopanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,9 +73,6 @@ namespace forumSystem
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SignUpButton,
             this.logInButton,
-            this.searchButton,
-            this.createGroupButton,
-            this.groupsButton,
             this.aboutButton});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 79);
@@ -114,48 +108,6 @@ namespace forumSystem
             this.logInButton.Size = new System.Drawing.Size(191, 48);
             this.logInButton.Text = "Log In";
             this.logInButton.Click += new System.EventHandler(this.ToolChanges_Click);
-            // 
-            // searchButton
-            // 
-            this.searchButton.AutoSize = false;
-            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.searchButton.CheckOnClick = true;
-            this.searchButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.searchButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.ForeColor = System.Drawing.Color.LightGray;
-            this.searchButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(191, 48);
-            this.searchButton.Text = "Search Partners";
-            this.searchButton.Click += new System.EventHandler(this.ToolChanges_Click);
-            // 
-            // createGroupButton
-            // 
-            this.createGroupButton.AutoSize = false;
-            this.createGroupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.createGroupButton.CheckOnClick = true;
-            this.createGroupButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.createGroupButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createGroupButton.ForeColor = System.Drawing.Color.LightGray;
-            this.createGroupButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.createGroupButton.Name = "createGroupButton";
-            this.createGroupButton.Size = new System.Drawing.Size(191, 48);
-            this.createGroupButton.Text = "Create Group";
-            this.createGroupButton.Click += new System.EventHandler(this.ToolChanges_Click);
-            // 
-            // groupsButton
-            // 
-            this.groupsButton.AutoSize = false;
-            this.groupsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.groupsButton.CheckOnClick = true;
-            this.groupsButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.groupsButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupsButton.ForeColor = System.Drawing.Color.LightGray;
-            this.groupsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.groupsButton.Name = "groupsButton";
-            this.groupsButton.Size = new System.Drawing.Size(191, 48);
-            this.groupsButton.Text = "My Groups";
-            this.groupsButton.Click += new System.EventHandler(this.ToolChanges_Click);
             // 
             // aboutButton
             // 
@@ -321,7 +273,6 @@ namespace forumSystem
         private System.Windows.Forms.Panel headerpanel;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton logInButton;
-        private System.Windows.Forms.ToolStripButton searchButton;
         private System.Windows.Forms.ToolStripButton aboutButton;
         private System.Windows.Forms.Label logo_lbl;
         private System.Windows.Forms.Label minimized_lbl;
@@ -334,8 +285,6 @@ namespace forumSystem
         private System.Windows.Forms.ToolStripButton SignUpButton;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ToolStripButton groupsButton;
-        private System.Windows.Forms.ToolStripButton createGroupButton;
         private System.Windows.Forms.Label loged_label;
     }
 }

@@ -24,7 +24,7 @@ namespace forumSystem.Controller
             throw new NotImplementedException();
         }
 
-        public List<Forum> getForums()
+        public List<string> getForums()
         {
             throw new NotImplementedException();
         }

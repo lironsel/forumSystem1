@@ -43,6 +43,11 @@ namespace forumSystem
                     panel.Controls.Add(new SignUpPanel(myControl));
                     SignUpButton.Checked = true;
                     break;
+                case "Log In":
+                    clearPanels(userChoose);
+                    panel.Controls.Add(new LogInPanel(myControl));
+                    logInButton.Checked = true;
+                    break;
                     /*case "Search Partners":
                         if (!logged)
                         {
@@ -56,16 +61,8 @@ namespace forumSystem
                             searchButton.Checked = true;
                         }
                         break;
-                    case "Sign Up":
-                        clearPanels(userChoose);
-                        panel.Controls.Add(new SignUpPanel(myControl));
-                        SignUpButton.Checked = true;
-                        break;
-                    case "Log In":
-                        clearPanels(userChoose);
-                        panel.Controls.Add(new LogInPanel(myControl));
-                        logInButton.Checked = true;
-                        break;
+                   
+                    
                     case "About":
                         clearPanels(userChoose);
                         panel.Controls.Add(new AboutPanel());
@@ -107,10 +104,7 @@ namespace forumSystem
             panel.Controls.Clear();
             aboutButton.Checked = false;
             logInButton.Checked = false;
-            searchButton.Checked = false;
             SignUpButton.Checked = false;
-            groupsButton.Checked = false;
-            createGroupButton.Checked = false;
         }
 
         private void headerpanel_MouseUp(object sender, MouseEventArgs e)

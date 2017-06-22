@@ -54,6 +54,12 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Model\Complaints.cs" />
     <Compile Include="Model\Model.cs" />
+    <Compile Include="View\ForumsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ForumsList.Designer.cs">
+      <DependentUpon>ForumsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ForumSystem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="View\SignUpPanel.Designer.cs">
       <DependentUpon>SignUpPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\ForumsList.resx">
+      <DependentUpon>ForumsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ForumSystem.resx">
       <DependentUpon>ForumSystem.cs</DependentUpon>
     </EmbeddedResource>
