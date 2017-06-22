@@ -41,6 +41,11 @@ namespace forumSystem.View
             }
         }
 
+        private void addThread_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void visiblePanel(bool visible)
         {
             listBox.Visible = visible;
@@ -59,15 +64,26 @@ namespace forumSystem.View
             {
                 //forums list
                 case 0:
-                    //addListToListBox()
                     forumName = selectedItem;
-                    //list_lbl.Text = 
+                    addListToListBox(myControl.enterForum(forumName));
+                    list_lbl.Text = forumName;
+                    label1.Text = "Choose sub forum and press 'Show' ";
+                    level++;
                     break;
                 //sub forums list
                 case 1:
+                    subForumName = selectedItem;
+                    //addListToListBox(myControl.(forumName, subForumName)); enter sub forum
+                    list_lbl.Text = forumName+"\\"+subForumName;
+                    label1.Text = "Choose thread and press 'Show' ";
+                    addThread_btn.Visible = true;
+                    level++;
                     break;
                 //threads list
                 case 2:
+                    threadName = selectedItem;
+                    list_lbl.Text = forumName;
+                    level++;
                     break;
             }
         }

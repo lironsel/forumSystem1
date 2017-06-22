@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.list_lbl = new System.Windows.Forms.Label();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.search_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.show_btn = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox = new System.Windows.Forms.ListBox();
-            this.list_lbl = new System.Windows.Forms.Label();
+            this.addThread_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.search_panel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.search_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,8 +50,56 @@
             this.panel1.Size = new System.Drawing.Size(955, 360);
             this.panel1.TabIndex = 20;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.421F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
+            this.tableLayoutPanel1.Controls.Add(this.list_lbl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listBox, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(955, 360);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // list_lbl
+            // 
+            this.list_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.list_lbl.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.list_lbl, 2);
+            this.list_lbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.list_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.list_lbl.Location = new System.Drawing.Point(3, 0);
+            this.list_lbl.Name = "list_lbl";
+            this.list_lbl.Size = new System.Drawing.Size(788, 36);
+            this.list_lbl.TabIndex = 43;
+            this.list_lbl.Text = "Forums";
+            this.list_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // listBox
+            // 
+            this.listBox.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.listBox.FormattingEnabled = true;
+            this.listBox.ItemHeight = 23;
+            this.listBox.Location = new System.Drawing.Point(163, 39);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(628, 282);
+            this.listBox.TabIndex = 0;
+            // 
             // search_panel
             // 
+            this.search_panel.Controls.Add(this.addThread_btn);
             this.search_panel.Controls.Add(this.label1);
             this.search_panel.Controls.Add(this.show_btn);
             this.search_panel.Controls.Add(this.panel1);
@@ -86,52 +135,21 @@
             this.show_btn.UseVisualStyleBackColor = false;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
             // 
-            // tableLayoutPanel1
+            // addThread_btn
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.421F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
-            this.tableLayoutPanel1.Controls.Add(this.list_lbl, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listBox, 1, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(955, 360);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // listBox
-            // 
-            this.listBox.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 23;
-            this.listBox.Location = new System.Drawing.Point(163, 39);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(628, 282);
-            this.listBox.TabIndex = 0;
-            // 
-            // list_lbl
-            // 
-            this.list_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.list_lbl.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.list_lbl, 2);
-            this.list_lbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.list_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.list_lbl.Location = new System.Drawing.Point(3, 0);
-            this.list_lbl.Name = "list_lbl";
-            this.list_lbl.Size = new System.Drawing.Size(788, 36);
-            this.list_lbl.TabIndex = 43;
-            this.list_lbl.Text = "Forums";
-            this.list_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.addThread_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addThread_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.addThread_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addThread_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.addThread_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.addThread_btn.Location = new System.Drawing.Point(59, 430);
+            this.addThread_btn.Name = "addThread_btn";
+            this.addThread_btn.Size = new System.Drawing.Size(165, 62);
+            this.addThread_btn.TabIndex = 43;
+            this.addThread_btn.Text = "add new thread";
+            this.addThread_btn.UseVisualStyleBackColor = false;
+            this.addThread_btn.Visible = false;
+            this.addThread_btn.Click += new System.EventHandler(this.addThread_btn_Click);
             // 
             // ForumsList
             // 
@@ -141,10 +159,10 @@
             this.Name = "ForumsList";
             this.Size = new System.Drawing.Size(973, 519);
             this.panel1.ResumeLayout(false);
-            this.search_panel.ResumeLayout(false);
-            this.search_panel.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.search_panel.ResumeLayout(false);
+            this.search_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +176,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Label list_lbl;
+        private System.Windows.Forms.Button addThread_btn;
     }
 }
