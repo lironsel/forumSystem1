@@ -13,5 +13,6 @@ namespace forumSystem.Controller
         string getConecteduser();
         List<Forum> getForums();
         List<SubForum> enterForum(string forumName);
+        void Login(string email, string password);
     }
 }

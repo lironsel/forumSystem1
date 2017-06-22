@@ -19,6 +19,11 @@ namespace forumSystem.Controller
             throw new NotImplementedException();
         }
 
+        public void Login(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Forum> getForums()
         {
             throw new NotImplementedException();
