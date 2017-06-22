@@ -9,7 +9,7 @@ namespace forumSystem.model
     public class SubForum
     {
         Forum assembling;
-        List<Thread> contains;
+        Dictionary<string, Thread> threads;
         List<Moderator> moderators;
         private string subject;
 
@@ -17,19 +17,24 @@ namespace forumSystem.model
         {
             assembling = belongsTo;
             this.subject = subject;
-            contains = new List<Thread>();
+            threads = new Dictionary<string, Thread>();
             moderators = new List<Moderator>();
             moderators.Add(moderator);
         }
 
         public void createThread(string title, string content, IObserver postedBy)
         {
-            contains.Add(new Thread(this, postedBy, title, content));
+            threads.Add(title, new Thread(this, postedBy, title, content));
         }
 
         public void connectDisToUser(string user, string dis) { }
         public void getModerator() { }
         public void searchModeator(string moderatorID) { }
         public void searchThread(string ThreadID) { }
+
+        internal List<string> getThreads()
+        {
+            return new List<string>(threads.Keys);
+        }
     }
 }

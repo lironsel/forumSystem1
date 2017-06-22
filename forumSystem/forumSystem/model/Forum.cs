@@ -23,7 +23,16 @@ namespace forumSystem.model
 
         public void newDiscussion(string forumID, string subForumID, string subject, User user) { }
         public void searchForum(string forumID) { }
-        public void searchSubForum(string subForumID) { }
+
+        public SubForum searchSubForum(string subForumID)
+        {
+            if (subForums.ContainsKey(subForumID))
+            {
+                return subForums[subForumID];
+            }
+            else return null;
+        }        
+
         public void getModertors(string forumID, string subForumID) { }
         //public void searchSubForum(String subForumID) { }
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
