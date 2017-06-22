@@ -9,9 +9,9 @@ namespace forumSystem.Controller
     {
         private ForumsModel model;
 
-        public List<SubForum> enterForum(string forumName)
+        public List<string> enterForum(string forumName)
         {
-            throw new NotImplementedException();
+            return model.enterForum(forumName);
         }
 
         public string getConecteduser()
@@ -26,7 +26,7 @@ namespace forumSystem.Controller
 
         public List<string> getForums()
         {
-            throw new NotImplementedException();
+            return model.getForums();
         }
 
         public void SignUp(string email, string password, string name, string birthday, string sex)

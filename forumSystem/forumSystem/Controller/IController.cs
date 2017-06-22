@@ -12,7 +12,7 @@ namespace forumSystem.Controller
         void SignUp(string email, string password, string name, string birthday, string sex);
         string getConecteduser();
         List<string> getForums();
-        List<SubForum> enterForum(string forumName);
+        List<string> enterForum(string forumName);
         void Login(string email, string password);
     }
 }

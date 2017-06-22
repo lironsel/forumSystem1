@@ -10,7 +10,7 @@ namespace forumSystem.model
         ErrorLogger errLoger;
         ActionLogger actionLogger;
         //List<loginWindow> login_user;
-        List<SubForum> subForums;
+        Dictionary<string, SubForum> subForums;
         List<Admin> admins;
 
         internal string getName()
@@ -28,6 +28,12 @@ namespace forumSystem.model
         //public void searchSubForum(String subForumID) { }
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
         public void createOpeningMessage(string forumID, string subforumID, string threadID, string message, User user) { }
+
+        internal List<string> getSubForums()
+        {
+            return new List<string>(subForums.Keys);
+        }
+
         public void createMessage(string message) { }
         public void ButtonGoToConnectWindow() { }
         public void create_LW() { }

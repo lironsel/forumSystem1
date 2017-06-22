@@ -53,13 +53,13 @@
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Model\Complaints.cs" />
-    <Compile Include="Model\Model.cs" />
     <Compile Include="View\ForumsList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ForumsList.Designer.cs">
       <DependentUpon>ForumsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ForumsModel.cs" />
     <Compile Include="View\ForumSystem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +109,11 @@
     </Compile>
     <EmbeddedResource Include="View\ForumsList.resx">
       <DependentUpon>ForumsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ForumSystem.resx">
       <DependentUpon>ForumSystem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
