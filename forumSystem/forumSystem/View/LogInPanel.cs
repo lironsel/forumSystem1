@@ -20,6 +20,7 @@ namespace forumSystem.View
             myControl.Login(email_txtbox.Text, password_txtbox.Text);
             email_txtbox.Text = "";
             password_txtbox.Text = "";
+
         }
     }
 }

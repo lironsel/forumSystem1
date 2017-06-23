@@ -59,6 +59,12 @@
     <Compile Include="View\AboutPanel.Designer.cs">
       <DependentUpon>AboutPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CreateThreadWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreateThreadWin.Designer.cs">
+      <DependentUpon>CreateThreadWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ForumsList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="View\SignUpPanel.Designer.cs">
       <DependentUpon>SignUpPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CreateThreadWin.resx">
+      <DependentUpon>CreateThreadWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ForumsList.resx">
       <DependentUpon>ForumsList.cs</DependentUpon>
       <SubType>Designer</SubType>
