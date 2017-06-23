@@ -83,8 +83,11 @@ namespace forumSystem.View
                 //threads list
                 case 2:
                     threadName = selectedItem;
-                    list_lbl.Text = forumName;
+                    //list_lbl.Text = forumName + "\\" + subForumName;
+                    ThreadPanel thredPanel = new ThreadPanel(myControl, forumName, subForumName, threadName);
                     level++;
+                    forumList_panel.Controls.Clear();
+                    forumList_panel.Controls.Add(thredPanel);
                     break;
             }
         }
