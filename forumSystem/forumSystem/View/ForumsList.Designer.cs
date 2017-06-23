@@ -32,13 +32,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.list_lbl = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
-            this.search_panel = new System.Windows.Forms.Panel();
+            this.forumList_panel = new System.Windows.Forms.Panel();
+            this.addThread_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.show_btn = new System.Windows.Forms.Button();
-            this.addThread_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.search_panel.SuspendLayout();
+            this.forumList_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,16 +97,32 @@
             this.listBox.Size = new System.Drawing.Size(628, 282);
             this.listBox.TabIndex = 0;
             // 
-            // search_panel
+            // forumList_panel
             // 
-            this.search_panel.Controls.Add(this.addThread_btn);
-            this.search_panel.Controls.Add(this.label1);
-            this.search_panel.Controls.Add(this.show_btn);
-            this.search_panel.Controls.Add(this.panel1);
-            this.search_panel.Location = new System.Drawing.Point(0, 0);
-            this.search_panel.Name = "search_panel";
-            this.search_panel.Size = new System.Drawing.Size(973, 519);
-            this.search_panel.TabIndex = 4;
+            this.forumList_panel.Controls.Add(this.addThread_btn);
+            this.forumList_panel.Controls.Add(this.label1);
+            this.forumList_panel.Controls.Add(this.show_btn);
+            this.forumList_panel.Controls.Add(this.panel1);
+            this.forumList_panel.Location = new System.Drawing.Point(0, 0);
+            this.forumList_panel.Name = "forumList_panel";
+            this.forumList_panel.Size = new System.Drawing.Size(973, 519);
+            this.forumList_panel.TabIndex = 4;
+            // 
+            // addThread_btn
+            // 
+            this.addThread_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.addThread_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.addThread_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addThread_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.addThread_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.addThread_btn.Location = new System.Drawing.Point(59, 430);
+            this.addThread_btn.Name = "addThread_btn";
+            this.addThread_btn.Size = new System.Drawing.Size(165, 62);
+            this.addThread_btn.TabIndex = 43;
+            this.addThread_btn.Text = "add new thread";
+            this.addThread_btn.UseVisualStyleBackColor = false;
+            this.addThread_btn.Visible = false;
+            this.addThread_btn.Click += new System.EventHandler(this.addThread_btn_Click);
             // 
             // label1
             // 
@@ -135,34 +151,18 @@
             this.show_btn.UseVisualStyleBackColor = false;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
             // 
-            // addThread_btn
-            // 
-            this.addThread_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addThread_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.addThread_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addThread_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.addThread_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.addThread_btn.Location = new System.Drawing.Point(59, 430);
-            this.addThread_btn.Name = "addThread_btn";
-            this.addThread_btn.Size = new System.Drawing.Size(165, 62);
-            this.addThread_btn.TabIndex = 43;
-            this.addThread_btn.Text = "add new thread";
-            this.addThread_btn.UseVisualStyleBackColor = false;
-            this.addThread_btn.Visible = false;
-            this.addThread_btn.Click += new System.EventHandler(this.addThread_btn_Click);
-            // 
             // ForumsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.search_panel);
+            this.Controls.Add(this.forumList_panel);
             this.Name = "ForumsList";
             this.Size = new System.Drawing.Size(973, 519);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.search_panel.ResumeLayout(false);
-            this.search_panel.PerformLayout();
+            this.forumList_panel.ResumeLayout(false);
+            this.forumList_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -170,7 +170,7 @@
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn publisher;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel search_panel;
+        private System.Windows.Forms.Panel forumList_panel;
         private System.Windows.Forms.Button show_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

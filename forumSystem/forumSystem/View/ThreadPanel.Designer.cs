@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.send_btn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.title_txt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -138,6 +139,7 @@
             // 
             // Thread_panel
             // 
+            this.Thread_panel.Controls.Add(this.title_txt);
             this.Thread_panel.Controls.Add(this.commit);
             this.Thread_panel.Controls.Add(this.label1);
             this.Thread_panel.Controls.Add(this.send_btn);
@@ -189,6 +191,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // title_txt
+            // 
+            this.title_txt.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.title_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.title_txt.Location = new System.Drawing.Point(19, 395);
+            this.title_txt.Name = "title_txt";
+            this.title_txt.Size = new System.Drawing.Size(141, 24);
+            this.title_txt.TabIndex = 44;
+            this.title_txt.Text = "Title";
+            this.title_txt.Click += new System.EventHandler(this.title_txt_Click);
+            // 
             // ThreadPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,5 +235,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Feedback;
         private System.Windows.Forms.TextBox commit;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox title_txt;
     }
 }

@@ -14,10 +14,20 @@ namespace forumSystem.View
     public partial class ThreadPanel : UserControl
     {
         IController myControl;
-        public ThreadPanel(IController control)
+        string forumName, subForumName, threadName;
+        public ThreadPanel(IController control, string forum, string subForum, string thread)
         {
             myControl = control;
+            forumName = forum;
+            subForumName = subForum;
+            threadName = thread;
+            list_lbl.Text = forumName + "\\" + subForumName + "\\" + threadName;
             InitializeComponent();
+        }
+
+        private void title_txt_Click(object sender, EventArgs e)
+        {
+            title_txt.Text = "";
         }
 
         private void commit_click(object sender, EventArgs e)
@@ -27,7 +37,18 @@ namespace forumSystem.View
 
         private void send_btn_Click(object sender, EventArgs e)
         {
-
+            bool sucsses = myControl.addFeedback(forumName, subForumName, threadName, title_txt.Text, commit.Text);
+            if (!sucsses)
+            {
+                MessageBox.Show("A message with the same title already exists in this thread","ERROR");
+            }
+            else
+            {
+                title_txt.Text = "Title";
+                commit.Text = "Commit..";
+                dataGridView.DataSource = myControl.enterThread(forumName, subForumName, threadName);
+                MessageBox.Show("A message added successfully");
+            }
         }
     }
 }
