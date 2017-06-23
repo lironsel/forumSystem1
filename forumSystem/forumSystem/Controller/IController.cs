@@ -18,5 +18,9 @@ namespace forumSystem.Controller
         DataTable enterThread(string forumName, string subForumName, string threadName);
         void Login(string email, string password);
         bool createThread(string forum, string subForum, string title, string message);
+        bool addFeedback(string forum, string subForum, string threadTitle, string feedbackTitle, string feedbackMessage);
+        void complainOnModerator(string forum, string subForum, string moderatorId, string complaint);
+        List<string> getSubForumModerators(string forum, string subForum);
+        List<string> getAdmins(string forum);
     }
 }

@@ -49,5 +49,25 @@ namespace forumSystem.Controller
         {
             return model.createThread(forum, subForum, title, message);
         }
+
+        public bool addFeedback(string forum, string subForum, string threadTitle, string feedbackTitle, string feedbackMessage)
+        {
+            return model.addFeedback(forum, subForum, threadTitle, feedbackTitle, feedbackMessage);
+        }
+
+        public void complainOnModerator(string forum, string subForum, string moderatorId, string complaint)
+        {
+            model.complainOnModerator(forum, subForum, moderatorId, complaint);
+        }
+
+        public List<string> getSubForumModerators(string forum, string subForum)
+        {
+            return model.getSubForumModerators(forum, subForum);
+        }
+
+        public List<string> getAdmins(string forum)
+        {
+            return model.getAdmins(forum);
+        }
     }
 }

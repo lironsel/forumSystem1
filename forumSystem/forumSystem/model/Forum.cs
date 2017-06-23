@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace forumSystem.model
 {
@@ -7,21 +6,29 @@ namespace forumSystem.model
     {
         string name;
         Policy policy;
-        ErrorLogger errLoger;
+        ErrorLogger errorLogger;
         ActionLogger actionLogger;
-        //List<loginWindow> login_user;
         Dictionary<string, SubForum> subForums;
-        List<Admin> admins;
+        Dictionary<string, Admin> admins;
+        Dictionary<string, User> users;
+        Dictionary<string, Group> groups;
 
         internal string getName()
         {
             return name;
         }
 
-        List<User> users;
-        List<Group> contains;
-
-        public void newDiscussion(string forumID, string subForumID, string subject, User user) { }
+        public Forum (string name, Admin admin)
+        {
+            this.name = name;
+            policy = new Policy();
+            users = new Dictionary<string, User>();
+            groups = new Dictionary<string, Group>();
+            subForums = new Dictionary<string, SubForum>();
+            admins = new Dictionary<string, Admin>();
+            errorLogger = new ErrorLogger(this);
+            actionLogger = new ActionLogger(this);
+        }
 
         public SubForum searchSubForum(string subForumID)
         {
@@ -32,14 +39,17 @@ namespace forumSystem.model
             else return null;
         }        
 
-        public void getModertors(string forumID, string subForumID) { }
-        //public void searchSubForum(String subForumID) { }
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
         public void createOpeningMessage(string forumID, string subforumID, string threadID, string message, User user) { }
 
         internal List<string> getSubForums()
         {
             return new List<string>(subForums.Keys);
+        }
+
+        public List<string> getAdmins()
+        {
+            return new List<string>(admins.Keys);
         }
 
         public void createMessage(string message) { }

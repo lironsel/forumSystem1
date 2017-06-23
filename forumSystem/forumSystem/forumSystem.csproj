@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\IController.cs" />
-    <Compile Include="Model\Complaints.cs" />
+    <Compile Include="Model\Policy\Complaints.cs" />
     <Compile Include="View\AboutPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,35 +72,33 @@
     <Compile Include="View\ForumSystem.Designer.cs">
       <DependentUpon>ForumSystem.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\ActionLogger.cs" />
-    <Compile Include="model\Admin.cs" />
-    <Compile Include="model\Administrative.cs" />
+    <Compile Include="Model\Loggers\ActionLogger.cs" />
+    <Compile Include="Model\Users\Admin.cs" />
+    <Compile Include="Model\Policy\Administrative.cs" />
     <Compile Include="model\Content.cs" />
-    <Compile Include="model\ErrorLogger.cs" />
-    <Compile Include="model\Complaint.cs" />
+    <Compile Include="Model\Loggers\ErrorLogger.cs" />
+    <Compile Include="Model\Users\Complaint.cs" />
     <Compile Include="model\Forum.cs" />
     <Compile Include="model\Group.cs" />
-    <Compile Include="model\friendRequest.cs" />
-    <Compile Include="Model\AUser.cs" />
+    <Compile Include="Model\Users\friendRequest.cs" />
+    <Compile Include="Model\Users\AUser.cs" />
     <Compile Include="model\IObserveable.cs" />
     <Compile Include="model\IObserver.cs" />
-    <Compile Include="model\Logger.cs" />
-    <Compile Include="model\invitation.cs" />
+    <Compile Include="Model\Loggers\Logger.cs" />
+    <Compile Include="Model\Users\invitation.cs" />
     <Compile Include="model\Message.cs" />
-    <Compile Include="model\Moderator.cs" />
-    <Compile Include="model\Notification.cs" />
-    <Compile Include="model\Policy.cs" />
-    <Compile Include="model\Rule.cs" />
-    <Compile Include="model\Security.cs" />
+    <Compile Include="Model\Users\Moderator.cs" />
+    <Compile Include="Model\Users\Notification.cs" />
+    <Compile Include="Model\Policy\Policy.cs" />
+    <Compile Include="Model\Policy\Rule.cs" />
+    <Compile Include="Model\Policy\Security.cs" />
     <Compile Include="model\SubForum.cs" />
     <Compile Include="model\Thread.cs" />
     <Compile Include="model\Title.cs" />
     <Compile Include="model\ThreadMessage.cs" />
-    <Compile Include="model\Visited.cs" />
-    <Compile Include="model\Visitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="model\User.cs" />
+    <Compile Include="Model\Users\User.cs" />
     <Compile Include="View\LogInPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

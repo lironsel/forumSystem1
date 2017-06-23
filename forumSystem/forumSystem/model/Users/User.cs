@@ -1,16 +1,12 @@
 ﻿using forumSystem.model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace forumSystem
 {
     public class User : AUser
     {
         //Forum signedUp;
-        List<Complaint> complain;
+        List<Complaint> complaints;
         List<User> friend_of;
         List<Group> included;
         List<ThreadMessage> publish;
@@ -52,31 +48,16 @@ namespace forumSystem
         public void ActiveUser() { }
         public void bottunSendMessage(string userID) { }
         public void addInvitation() { }
-        public void addComplaint(string complaintID, string user1, string user2) { }
+        public void addComplaint(string complaint, string filedBy, string filedOn)
+        {
+            complaints.Add(new Complaint(complaint, filedBy, filedOn));
+        }
+
         public void getComplaintAbout() { }
 
-        public override bool visit(Moderator moderator)
-        {
-            return true;
-        }
-
-        public override bool visit(User user)
-        {
-            return false;
-        }
-
-        public override bool visit(Admin admin)
-        {
-            return true;
-        }
         public override void notify(string data)
         {
-            throw new NotImplementedException();
-        }
-
-        public override void accept(Visitor v)
-        {
-            v.visit(this);
+            receive.Add(new Notification(data));
         }
 
         public override string getName()

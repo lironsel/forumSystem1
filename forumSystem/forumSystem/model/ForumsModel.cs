@@ -1,9 +1,6 @@
 ﻿using forumSystem.model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 
 namespace forumSystem.Model
@@ -62,6 +59,49 @@ namespace forumSystem.Model
                 Forum currentForum = forums[forum];
                 SubForum currentSubForum = currentForum.searchSubForum(subForum);
                 currentSubForum.createThread(title, message, connectedUser);
+                return true;
+            }
+            catch { return false; }
+        }
+
+        internal void complainOnModerator(string forum, string subForum, string filedOn, string complaint)
+        {
+            try
+            {
+                Forum currentForum = forums[forum];
+                SubForum currentSubForum = currentForum.searchSubForum(subForum);
+                Moderator moderator = currentSubForum.searchModeator(filedOn);
+                moderator.addComplaint(complaint, connectedUser.getName(), filedOn);
+            }
+            catch { };
+        }
+
+        internal List<string> getSubForumModerators(string forum, string subForum)
+        {
+            try
+            {
+                return forums[forum].searchSubForum(subForum).getModerators();
+            }
+            catch { return null; }
+        }
+
+        internal List<string> getAdmins(string forum)
+        {
+            try
+            {
+                return forums[forum].getAdmins();
+            }
+            catch { return null; }
+        }
+
+        internal bool addFeedback(string forum, string subForum, string threadTitle, string feedbackTitle, string feedbackMessage)
+        {
+            try
+            {
+                Forum currentForum = forums[forum];
+                SubForum currentSubForum = currentForum.searchSubForum(subForum);
+                Thread thread = currentSubForum.searchThread(threadTitle);
+                thread.addResponseMessage(feedbackMessage, feedbackTitle, connectedUser);
                 return true;
             }
             catch { return false; }
