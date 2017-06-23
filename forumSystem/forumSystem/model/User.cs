@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem
 {
-    public class User : Guest, IObserver
+    public class User : AUser
     {
         //Forum signedUp;
         List<Complaint> complain;
@@ -69,7 +69,7 @@ namespace forumSystem
         {
             return true;
         }
-        public void notify(string data)
+        public override void notify(string data)
         {
             throw new NotImplementedException();
         }
@@ -79,7 +79,7 @@ namespace forumSystem
             v.visit(this);
         }
 
-        public string getName()
+        public override string getName()
         {
             return m_name;
         }

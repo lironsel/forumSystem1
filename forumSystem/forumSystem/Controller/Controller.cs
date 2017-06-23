@@ -15,9 +15,9 @@ namespace forumSystem.Controller
             return model.enterForum(forumName);
         }
 
-        public string getConecteduser()
+        public string getConnectedUser()
         {
-            throw new NotImplementedException();
+            return model.getConnectedUser();
         }
 
         public void Login(string email, string password)
@@ -43,6 +43,11 @@ namespace forumSystem.Controller
         public DataTable enterThread(string forumName, string subForumName, string threadName)
         {
             return model.enterThread(forumName, subForumName, threadName);
+        }
+
+        public bool createThread(string forum, string subForum, string title, string message)
+        {
+            return model.createThread(forum, subForum, title, message);
         }
     }
 }

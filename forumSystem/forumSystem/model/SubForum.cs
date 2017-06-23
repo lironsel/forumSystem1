@@ -24,7 +24,7 @@ namespace forumSystem.model
 
         public void createThread(string title, string content, IObserver postedBy)
         {
-            threads.Add(title, new Thread(this, postedBy, title, content));
+                threads.Add(title, new Thread(this, postedBy, title, content));
         }
 
         public void connectDisToUser(string user, string dis) { }

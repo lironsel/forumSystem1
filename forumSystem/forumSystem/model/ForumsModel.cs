@@ -11,12 +11,19 @@ namespace forumSystem.Model
     class ForumsModel
     {
         private static ForumsModel instance = null;
+        private AUser connectedUser;
         Dictionary<string, Forum> forums;
 
         private ForumsModel()
         {
             forums = new Dictionary<string, Forum>();
             loadForums();
+        }
+
+        internal string getConnectedUser()
+        {
+            if (null != connectedUser) return connectedUser.getName();
+            else return "No Connected User!";
         }
 
         private void loadForums()
@@ -46,6 +53,18 @@ namespace forumSystem.Model
             {
                 return null;
             }
+        }
+
+        internal bool createThread(string forum, string subForum, string title, string message)
+        {
+            try
+            {
+                Forum currentForum = forums[forum];
+                SubForum currentSubForum = currentForum.searchSubForum(subForum);
+                currentSubForum.createThread(title, message, connectedUser);
+                return true;
+            }
+            catch { return false; }
         }
 
         internal List<string> enterSubForum(string forumName, string subForumName)
