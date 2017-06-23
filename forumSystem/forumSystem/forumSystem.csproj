@@ -81,7 +81,7 @@
     <Compile Include="model\Forum.cs" />
     <Compile Include="model\Group.cs" />
     <Compile Include="model\friendRequest.cs" />
-    <Compile Include="model\Guest.cs" />
+    <Compile Include="Model\AUser.cs" />
     <Compile Include="model\IObserveable.cs" />
     <Compile Include="model\IObserver.cs" />
     <Compile Include="model\Logger.cs" />

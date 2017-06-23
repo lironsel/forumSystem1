@@ -39,7 +39,7 @@ namespace forumSystem
         {
             if (logged)
             {
-                loged_label.Text = myControl.getConecteduser();
+                loged_label.Text = myControl.getConnectedUser();
             }
             switch (userChoose)
             {

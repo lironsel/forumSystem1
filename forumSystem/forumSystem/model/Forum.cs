@@ -22,7 +22,6 @@ namespace forumSystem.model
         List<Group> contains;
 
         public void newDiscussion(string forumID, string subForumID, string subject, User user) { }
-        public void searchForum(string forumID) { }
 
         public SubForum searchSubForum(string subForumID)
         {
