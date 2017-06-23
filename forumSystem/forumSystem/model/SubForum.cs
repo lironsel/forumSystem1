@@ -10,7 +10,7 @@ namespace forumSystem.model
     {
         Forum assembling;
         Dictionary<string, Thread> threads;
-        List<Moderator> moderators;
+        Dictionary<string, IObserver> moderators;
         private string subject;
 
         public SubForum(Forum belongsTo, string subject, Moderator moderator)
@@ -18,8 +18,8 @@ namespace forumSystem.model
             assembling = belongsTo;
             this.subject = subject;
             threads = new Dictionary<string, Thread>();
-            moderators = new List<Moderator>();
-            moderators.Add(moderator);
+            moderators = new Dictionary<string, IObserver>();
+            moderators.Add(moderator.getName(), moderator);
         }
 
         public void createThread(string title, string content, IObserver postedBy)
@@ -28,8 +28,13 @@ namespace forumSystem.model
         }
 
         public void connectDisToUser(string user, string dis) { }
-        public void getModerator() { }
-        public void searchModeator(string moderatorID) { }
+        public Moderator searchModeator(string moderatorID)
+        {
+            if (moderators.ContainsKey(moderatorID))
+                    return (Moderator)moderators[moderatorID];
+            else return null;
+        }
+
         public Thread searchThread(string ThreadID)
         {
             if (threads.ContainsKey(ThreadID))
@@ -42,6 +47,17 @@ namespace forumSystem.model
         internal List<string> getThreads()
         {
             return new List<string>(threads.Keys);
+        }
+
+        internal List<string> getModerators()
+        {
+            return new List<string>(moderators.Keys);
+        }
+
+        public void addModerator(IObserver moderator)
+        {
+            if (!moderators.ContainsKey(moderator.getName()))
+                moderators.Add(moderator.getName(), moderator);
         }
     }
 }
