@@ -14,6 +14,7 @@ namespace forumSystem.View
             InitializeComponent();
             myControl = c;
             password_txtbox.PasswordChar = '*';
+            //forumList = new ComboBox();
             updateForumList();
         }
 
@@ -41,10 +42,11 @@ namespace forumSystem.View
         private void updateForumList()
         {
             List<string> forums = myControl.getForums();
-            foreach(string forum in forums)
-            {
-                forumList.Items.Add(forum);
-            }
+            forumList.DataSource = forums;
+            //foreach(string forum in forums)
+            //{
+            //    forumList.Items.Add(forum);
+            //}
         }
     }
 }

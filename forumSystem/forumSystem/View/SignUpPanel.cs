@@ -10,9 +10,9 @@ namespace forumSystem.View
         IController myControl;
         public SignUpPanel(IController m)
         {
+            InitializeComponent();
             myControl = m;
             updateForumList();
-            InitializeComponent();
         }
 
         private void sign_up_btn_Click(object sender, EventArgs e)
@@ -58,10 +58,11 @@ namespace forumSystem.View
         private void updateForumList()
         {
             List<string> forums = myControl.getForums();
-            foreach (string forum in forums)
-            {
-                forumList.Items.Add(forum);
-            }
+            forumList.DataSource = forums;
+            //foreach (string forum in forums)
+            //{
+            //    forumList.Items.Add(forum);
+            //}
         }
 
     }
