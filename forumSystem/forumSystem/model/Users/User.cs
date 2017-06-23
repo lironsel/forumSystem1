@@ -1,11 +1,11 @@
 ﻿using forumSystem.model;
 using System.Collections.Generic;
+using System;
 
 namespace forumSystem
 {
     public class User : AUser
     {
-        //Forum signedUp;
         List<Complaint> complaints;
         List<User> friend_of;
         List<Group> included;
@@ -18,12 +18,25 @@ namespace forumSystem
         List<friendRequest> recive;
         string m_name;
         string m_password;
+        private string m_userName;
+        private string birthday;
+        private string sex;
         bool m_active;
+
         public User(string name, string password)
         {
             m_active = true;
             m_name = name;
             m_password = password;
+        }
+
+        public User(string userName, string password, string name, string birthday, string sex) : this(name, password)
+        {
+            this.m_userName = userName;
+            this.m_name = name;
+            this.m_password = password;
+            this.birthday = birthday;
+            this.sex = sex;
         }
 
         public void creatInvitation() { }
@@ -32,7 +45,6 @@ namespace forumSystem
         public void changeTitle(string newTitle) { }
         public void changeCreateDateTonow() { }
         public void suspendUser(string userID) { }
-        //private void user = findUser(String userID){}
         public void changePermissionToConnect(bool change) { }
         public void active(bool active) { }
         public void addToUsers() { }
@@ -40,11 +52,10 @@ namespace forumSystem
         public void addMessageToOutbox(string content) { }
         public void addMessageToUserInbox(string contant, string senderID) { }
         public void getUser(string userID) { }
-        //public void getUser(String userInviteID) { }
         public void searchUser(string user) { }
         public void changeStatusToActive(string UserID) { }
         public void changeStatus(bool change) { }
-        public void chackIfPassword(string password) { }
+        public bool chackIfPassword(string password) { return password == m_password; }
         public void ActiveUser() { }
         public void bottunSendMessage(string userID) { }
         public void addInvitation() { }
@@ -58,6 +69,11 @@ namespace forumSystem
         public override void notify(string data)
         {
             receive.Add(new Notification(data));
+        }
+
+        public override string getUserName()
+        {
+            return m_userName;
         }
 
         public override string getName()

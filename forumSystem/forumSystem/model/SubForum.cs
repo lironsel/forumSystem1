@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
-    public class SubForum
+    public class SubForum : IObserveable
     {
         Forum assembling;
         Dictionary<string, Thread> threads;
@@ -19,7 +19,7 @@ namespace forumSystem.model
             this.subject = subject;
             threads = new Dictionary<string, Thread>();
             moderators = new Dictionary<string, IObserver>();
-            moderators.Add(moderator.getName(), moderator);
+            moderators.Add(moderator.getUserName(), moderator);
         }
 
         public void createThread(string title, string content, IObserver postedBy)
@@ -56,8 +56,24 @@ namespace forumSystem.model
 
         public void addModerator(IObserver moderator)
         {
-            if (!moderators.ContainsKey(moderator.getName()))
-                moderators.Add(moderator.getName(), moderator);
+            if (!moderators.ContainsKey(moderator.getUserName()))
+                moderators.Add(moderator.getUserName(), moderator);
+        }
+
+        public void removeModerator(IObserver moderator)
+        {
+            if (moderators.ContainsKey(moderator.getUserName()))
+                moderators.Remove(moderator.getUserName());
+        }
+
+        public void addObserver(IObserver observer)
+        {
+            addModerator(observer);
+        }
+
+        public void removeObserver(IObserver observer)
+        {
+            addModerator(observer);
         }
     }
 }

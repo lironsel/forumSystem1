@@ -25,9 +25,9 @@ namespace forumSystem.Controller
             return model.getConnectedUser();
         }
 
-        public bool Login(string email, string password)
+        public bool Login(string forum, string userName, string password)
         {
-            return true;
+            return model.login(forum, userName, password);
         }
 
         public List<string> getForums()
@@ -35,9 +35,9 @@ namespace forumSystem.Controller
             return model.getForums();
         }
 
-        public bool SignUp(string email, string password, string name, string birthday, string sex)
+        public bool SignUp(string forum, string userName, string password, string name, string birthday, string sex)
         {
-            return true;
+            return model.signUp(forum, userName, password, name, birthday, sex);
         }
 
         public List<string> enterSubForum(string forumName, string subForumName)
@@ -73,6 +73,11 @@ namespace forumSystem.Controller
         public List<string> getAdmins(string forum)
         {
             return model.getAdmins(forum);
+        }
+
+        public bool createForum(string name, string adminName, string adminPassword)
+        {
+            return model.createForum(name, adminName, adminPassword);
         }
     }
 }
