@@ -46,5 +46,6 @@ namespace forumSystem.View
         {
             birthday_textBox.Text = "";
         }
+        
     }
 }
