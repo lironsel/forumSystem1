@@ -15,12 +15,21 @@ namespace forumSystem.View
 
         private void sign_up_btn_Click(object sender, EventArgs e)
         {
-            myControl.SignUp(email_textBox.Text, password_textBox.Text, name_textBox.Text, birthday_textBox.Text, sex_textBox.Text);
-            email_textBox.Text = "";
-            password_textBox.Text = "8 characters";
-            name_textBox.Text = "";
-            birthday_textBox.Text = "dd/mm/yyyy";
-            sex_textBox.Text = "f/m";
+            if(myControl.SignUp(email_textBox.Text, password_textBox.Text, name_textBox.Text, birthday_textBox.Text, sex_textBox.Text))
+            {               
+                signIn_panel.Controls.Clear();
+                signIn_panel.Controls.Add(new ForumsList(myControl));                
+            }
+            else
+            {
+                email_textBox.Text = "";
+                password_textBox.Text = "8 characters";
+                name_textBox.Text = "";
+                birthday_textBox.Text = "dd/mm/yyyy";
+                sex_textBox.Text = "f/m";
+                MessageBox.Show("User Mail already exists!", "EROR");
+            }
+            
         }
 
         private void password_textBox_Click(object sender, EventArgs e)

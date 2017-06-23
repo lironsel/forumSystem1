@@ -10,6 +10,11 @@ namespace forumSystem.Controller
     {
         private ForumsModel model;
 
+        public MyController()
+        {
+            model = ForumsModel.Instance;
+        }
+
         public List<string> enterForum(string forumName)
         {
             return model.enterForum(forumName);
@@ -20,9 +25,9 @@ namespace forumSystem.Controller
             return model.getConnectedUser();
         }
 
-        public void Login(string email, string password)
+        public bool Login(string email, string password)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public List<string> getForums()
@@ -30,9 +35,9 @@ namespace forumSystem.Controller
             return model.getForums();
         }
 
-        public void SignUp(string email, string password, string name, string birthday, string sex)
+        public bool SignUp(string email, string password, string name, string birthday, string sex)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public List<string> enterSubForum(string forumName, string subForumName)

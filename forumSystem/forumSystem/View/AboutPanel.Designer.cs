@@ -52,7 +52,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.15884F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.84116F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.click, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.contact_lbl, 1, 4);
@@ -77,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(405, 66);
+            this.label1.Location = new System.Drawing.Point(404, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 22);
             this.label1.TabIndex = 1;
@@ -90,11 +90,11 @@
             this.click.AutoSize = true;
             this.click.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.click.Location = new System.Drawing.Point(323, 405);
+            this.click.Location = new System.Drawing.Point(327, 405);
             this.click.Name = "click";
-            this.click.Size = new System.Drawing.Size(310, 22);
+            this.click.Size = new System.Drawing.Size(300, 22);
             this.click.TabIndex = 5;
-            this.click.Text = "PartnerMatcher.bgu@gmail.com";
+            this.click.Text = "OrangeSystem.bgu@gmail.com";
             this.click.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // contact_lbl
@@ -117,7 +117,7 @@
             this.developers_txt.CausesValidation = false;
             this.developers_txt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.developers_txt.ForeColor = System.Drawing.Color.White;
-            this.developers_txt.Location = new System.Drawing.Point(367, 115);
+            this.developers_txt.Location = new System.Drawing.Point(366, 115);
             this.developers_txt.Multiline = true;
             this.developers_txt.Name = "developers_txt";
             this.developers_txt.ReadOnly = true;

@@ -47,60 +47,19 @@ namespace forumSystem
                     clearPanels(userChoose);
                     panel.Controls.Add(new SignUpPanel(myControl));
                     SignUpButton.Checked = true;
+                    loged_label.Visible = false;
                     break;
                 case "Log In":
                     clearPanels(userChoose);
                     panel.Controls.Add(new LogInPanel(myControl));
                     logInButton.Checked = true;
+                    loged_label.Visible = false;
                     break;
                 case "About":
                     clearPanels(userChoose);
                     panel.Controls.Add(new AboutPanel());
                     aboutButton.Checked = true;
-                    break;
-                    /*case "Search Partners":
-                        if (!logged)
-                        {
-                            MessageBox.Show("In order to start searching you must first Login", "Error");
-                            searchButton.Checked = false;
-                        }
-                        else
-                        {
-                            clearPanels(userChoose);
-                            panel.Controls.Add(new SearchPanel(myControl));
-                            searchButton.Checked = true;
-                        }
-                        break;
-                   
-                    
-                    
-
-                    case "My Groups":
-                        if (!logged)
-                        {
-                            MessageBox.Show("In order to start searching you must first Login", "Error");
-                            groupsButton.Checked = false;
-                        }
-                        else
-                        {
-                            clearPanels(userChoose);
-                            panel.Controls.Add(new ShowUserGroup(myControl));
-                            groupsButton.Checked = true;
-                        }
-                        break;
-                    case "Create Group":
-                        if (!logged)
-                        {
-                            MessageBox.Show("In order to start searching you must first Login", "Error");
-                            createGroupButton.Checked = false;
-                        }
-                        else
-                        {
-                            clearPanels(userChoose);
-                            panel.Controls.Add(new CreateGroupPanel(myControl));
-                            createGroupButton.Checked = true;
-                        }
-                        break;*/
+                    break;                    
             }
         }
 

@@ -43,7 +43,8 @@ namespace forumSystem.View
 
         private void addThread_btn_Click(object sender, EventArgs e)
         {
-
+            CreateThreadWin window = new CreateThreadWin(myControl, forumName, subForumName);
+            window.Show();
         }
 
         private void visiblePanel(bool visible)
