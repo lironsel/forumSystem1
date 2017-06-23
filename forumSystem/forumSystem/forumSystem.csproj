@@ -146,6 +146,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\LogInPanel.resx">
+      <DependentUpon>LogInPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SignUpPanel.resx">
       <DependentUpon>SignUpPanel.cs</DependentUpon>
     </EmbeddedResource>

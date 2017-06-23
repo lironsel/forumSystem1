@@ -44,6 +44,8 @@ namespace forumSystem.View
             this.label6 = new System.Windows.Forms.Label();
             this.sign_up_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.forumList = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.signIn_panel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,7 @@ namespace forumSystem.View
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 364F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.email_textBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.birthday_textBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.sex_textBox, 1, 4);
@@ -74,7 +77,7 @@ namespace forumSystem.View
             this.tableLayoutPanel1.Controls.Add(this.name_textBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.sign_up_btn, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.forumList, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -152,11 +155,11 @@ namespace forumSystem.View
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label5.Location = new System.Drawing.Point(321, 40);
+            this.label5.Location = new System.Drawing.Point(269, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 40);
+            this.label5.Size = new System.Drawing.Size(118, 40);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Email :";
+            this.label5.Text = "User Name :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
@@ -225,14 +228,26 @@ namespace forumSystem.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(615, 299);
+            this.label1.Location = new System.Drawing.Point(311, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 44);
+            this.label1.Size = new System.Drawing.Size(76, 40);
             this.label1.TabIndex = 41;
-            this.label1.Text = "Password  must contain 8 characters and at leaste one letter.";
+            this.label1.Text = "Forum :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // forumList
+            // 
+            this.forumList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forumList.BackColor = System.Drawing.Color.Gainsboro;
+            this.forumList.FormattingEnabled = true;
+            this.forumList.Location = new System.Drawing.Point(393, 243);
+            this.forumList.Name = "forumList";
+            this.forumList.Size = new System.Drawing.Size(216, 21);
+            this.forumList.TabIndex = 42;
             // 
             // SignUpPanel
             // 
@@ -268,5 +283,7 @@ namespace forumSystem.View
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox forumList;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }

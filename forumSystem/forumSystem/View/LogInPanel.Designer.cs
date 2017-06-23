@@ -37,6 +37,8 @@ namespace forumSystem.View
             this.email_txtbox = new System.Windows.Forms.TextBox();
             this.password_txtbox = new System.Windows.Forms.TextBox();
             this.login_btn = new System.Windows.Forms.Button();
+            this.forumList = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.logIn_panel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,13 +58,15 @@ namespace forumSystem.View
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 434F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 383F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pass_lbl, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.email_lbl, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.email_txtbox, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.password_txtbox, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.login_btn, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.forumList, 3, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -72,8 +76,8 @@ namespace forumSystem.View
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(975, 505);
@@ -98,27 +102,31 @@ namespace forumSystem.View
             this.email_lbl.Dock = System.Windows.Forms.DockStyle.Right;
             this.email_lbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.email_lbl.Location = new System.Drawing.Point(261, 95);
+            this.email_lbl.Location = new System.Drawing.Point(209, 95);
             this.email_lbl.Name = "email_lbl";
-            this.email_lbl.Size = new System.Drawing.Size(66, 32);
+            this.email_lbl.Size = new System.Drawing.Size(118, 32);
             this.email_lbl.TabIndex = 5;
-            this.email_lbl.Text = "Email :";
+            this.email_lbl.Text = "User Name :";
             this.email_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // email_txtbox
             // 
+            this.email_txtbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.email_txtbox.BackColor = System.Drawing.Color.Gainsboro;
             this.email_txtbox.Location = new System.Drawing.Point(360, 98);
             this.email_txtbox.Name = "email_txtbox";
-            this.email_txtbox.Size = new System.Drawing.Size(224, 20);
+            this.email_txtbox.Size = new System.Drawing.Size(229, 20);
             this.email_txtbox.TabIndex = 29;
             // 
             // password_txtbox
             // 
+            this.password_txtbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.password_txtbox.BackColor = System.Drawing.Color.Gainsboro;
             this.password_txtbox.Location = new System.Drawing.Point(360, 147);
             this.password_txtbox.Name = "password_txtbox";
-            this.password_txtbox.Size = new System.Drawing.Size(224, 20);
+            this.password_txtbox.Size = new System.Drawing.Size(229, 20);
             this.password_txtbox.TabIndex = 30;
             // 
             // login_btn
@@ -134,6 +142,30 @@ namespace forumSystem.View
             this.login_btn.Text = "Login";
             this.login_btn.UseVisualStyleBackColor = false;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
+            // 
+            // forumList
+            // 
+            this.forumList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.forumList.BackColor = System.Drawing.Color.Gainsboro;
+            this.forumList.FormattingEnabled = true;
+            this.forumList.Location = new System.Drawing.Point(360, 196);
+            this.forumList.Name = "forumList";
+            this.forumList.Size = new System.Drawing.Size(229, 21);
+            this.forumList.TabIndex = 43;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.label1.Location = new System.Drawing.Point(251, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 36);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Forum :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // LogInPanel
             // 
@@ -158,5 +190,7 @@ namespace forumSystem.View
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label email_lbl;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ComboBox forumList;
+        private System.Windows.Forms.Label label1;
     }
 }
