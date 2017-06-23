@@ -15,17 +15,7 @@ namespace forumSystem.Model
         {
             forums = new Dictionary<string, Forum>();
             loadForums();
-        }
-
-        internal string getConnectedUser()
-        {
-            if (null != connectedUser) return connectedUser.getName();
-            else return "No Connected User!";
-        }
-
-        private void loadForums()
-        {
-            //Load Forums List from JSON and build the forums Dictionary
+            /*TEST ONLY*/createTestData();
         }
 
         public static ForumsModel Instance
@@ -38,6 +28,53 @@ namespace forumSystem.Model
                 }
                 return instance;
             }
+        }
+
+        internal bool login(string forum, string userName, string password)
+        {
+            try
+            {
+                return forums[forum].login(userName, password);
+            }
+            catch { return false; }
+        }
+
+        private void createTestData()
+        {
+            createForum("Main Forum", "admin", "admin");
+            Moderator moderator  = new Moderator("m1", "m1");
+            Forum mainForum = forums["Main Forum"];
+            mainForum.addUserTEST_ONLY(moderator);
+            createSubForum("Main Forum" , "First Sub Forum", moderator);
+            createSubForum("Main Forum", "Second Sub Forum", moderator);
+            mainForum.createUser("AdarOv", "1234", "Adar Ovadya", "12/34/56", "Female");
+            mainForum.createUser("LironAv", "1234", "Liron Avraham", "12/34/56", "Male");
+        }
+
+        internal bool signUp(string forum, string userName, string password, string name, string birthday, string sex)
+        {
+            try
+            {
+                return forums[forum].createUser(userName, password, name, birthday, sex);
+            }
+            catch { return false; }
+        }
+
+        private bool createSubForum(string forum, string subForumName, Moderator moderator)
+        {
+            Forum currentForum = forums[forum];
+            return forums[forum].addSubForum(forums[forum], subForumName, moderator);
+        }
+
+        internal string getConnectedUser()
+        {
+            if (null != connectedUser) return connectedUser.getUserName();
+            else return "No Connected User!";
+        }
+
+        private void loadForums()
+        {
+            //Load Forums List from JSON and build the forums Dictionary
         }
 
         internal List<string> enterForum(string forumName)
@@ -71,26 +108,31 @@ namespace forumSystem.Model
                 Forum currentForum = forums[forum];
                 SubForum currentSubForum = currentForum.searchSubForum(subForum);
                 Moderator moderator = currentSubForum.searchModeator(filedOn);
-                moderator.addComplaint(complaint, connectedUser.getName(), filedOn);
+                moderator.addComplaint(complaint, connectedUser.getUserName(), filedOn);
             }
             catch { };
         }
 
+        internal bool createForum(string name, string adminName, string adminPassword)
+        {
+            if (!forums.ContainsKey(name))
+            {
+                Forum forum = new Forum(name, new Admin(adminName, adminPassword));
+                forums.Add(name, forum);
+                return true;
+            }
+            else return false;
+        }
+
         internal List<string> getSubForumModerators(string forum, string subForum)
         {
-            try
-            {
-                return forums[forum].searchSubForum(subForum).getModerators();
-            }
+            try { return forums[forum].searchSubForum(subForum).getModerators(); }
             catch { return null; }
         }
 
         internal List<string> getAdmins(string forum)
         {
-            try
-            {
-                return forums[forum].getAdmins();
-            }
+            try { return forums[forum].getAdmins(); }
             catch { return null; }
         }
 
@@ -143,19 +185,14 @@ namespace forumSystem.Model
                     table.Rows.Add(row);
                 }
             }
-            catch(Exception ex) { return null; }
+            catch { return null; }
         
             return table;
         }
 
         internal List<string> getForums()
         {
-            List<string> forumNames = new List<string>();
-            foreach (KeyValuePair<string, Forum> forum in forums)
-            {
-                forumNames.Add(forum.Key);
-            }
-            return forumNames;
+            return new List<string>(forums.Keys);
         }
     }
 }

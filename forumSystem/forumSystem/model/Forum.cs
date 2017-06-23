@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace forumSystem.model
 {
@@ -28,6 +29,31 @@ namespace forumSystem.model
             admins = new Dictionary<string, Admin>();
             errorLogger = new ErrorLogger(this);
             actionLogger = new ActionLogger(this);
+
+            try
+            {
+                admins.Add(admin.getUserName(), admin);
+                users.Add(admin.getUserName(), admin);
+            }
+            catch { errorLogger.Log("ERROR ADDING ADMIN"); }
+        }
+
+        internal bool login(string userName, string password)
+        {
+            if (users.ContainsKey(userName))
+            {
+                return users[userName].chackIfPassword(password);
+            }
+            else return false;
+        }
+
+        internal void addUserTEST_ONLY(User user)
+        {
+            try
+            {
+                users.Add(user.getUserName(), user);
+            }
+            catch { }
         }
 
         public SubForum searchSubForum(string subForumID)
@@ -40,6 +66,31 @@ namespace forumSystem.model
         }        
 
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
+
+        internal bool createUser(string userName, string password, string name, string birthday, string sex)
+        {
+            try
+            {
+                users.Add(userName, new User(userName, password, name, birthday, sex));
+                return true;
+            }
+            catch { return false; }
+        }
+
+        internal bool addSubForum(Forum forum, string subForumName, Moderator moderator)
+        {
+            try
+            {
+                subForums.Add(subForumName, new SubForum(forum, subForumName, moderator));
+                if (!users.ContainsKey(moderator.getUserName()))
+                {
+                    users.Add(moderator.getUserName(), moderator);
+                }
+                return true;
+            }
+            catch { return false; } 
+        }
+
         public void createOpeningMessage(string forumID, string subforumID, string threadID, string message, User user) { }
 
         internal List<string> getSubForums()
