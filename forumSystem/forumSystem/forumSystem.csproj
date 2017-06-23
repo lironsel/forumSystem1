@@ -119,6 +119,9 @@
     <Compile Include="View\SignUpPanel.Designer.cs">
       <DependentUpon>SignUpPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AboutPanel.resx">
+      <DependentUpon>AboutPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CreateThreadWin.resx">
       <DependentUpon>CreateThreadWin.cs</DependentUpon>
     </EmbeddedResource>

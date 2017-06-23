@@ -47,18 +47,19 @@ namespace forumSystem
                     clearPanels(userChoose);
                     panel.Controls.Add(new SignUpPanel(myControl));
                     SignUpButton.Checked = true;
+                    loged_label.Visible = false;
                     break;
                 case "Log In":
                     clearPanels(userChoose);
                     panel.Controls.Add(new LogInPanel(myControl));
                     logInButton.Checked = true;
+                    loged_label.Visible = false;
                     break;
                 case "About":
                     clearPanels(userChoose);
                     panel.Controls.Add(new AboutPanel());
                     aboutButton.Checked = true;
-                    break;
-                    
+                    break;                    
             }
         }
 

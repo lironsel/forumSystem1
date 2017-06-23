@@ -17,10 +17,17 @@ namespace forumSystem.View
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            myControl.Login(email_txtbox.Text, password_txtbox.Text);
-            email_txtbox.Text = "";
-            password_txtbox.Text = "";
-
+            if(myControl.Login(email_txtbox.Text, password_txtbox.Text))
+            {
+                logIn_panel.Controls.Clear();
+                logIn_panel.Controls.Add(new ForumsList(myControl));
+            }
+            else
+            {
+                email_txtbox.Text = "";
+                password_txtbox.Text = "";
+                MessageBox.Show("User doesnt exists!", "EROR");
+            }            
         }
     }
 }

@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.headerpanel = new System.Windows.Forms.Panel();
+            this.minimized_lbl = new System.Windows.Forms.Label();
             this.exit_lbl = new System.Windows.Forms.Label();
             this.tool_lbl = new System.Windows.Forms.Label();
-            this.minimized_lbl = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.title_txtBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.message_txtBtn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.message_txtBtn = new System.Windows.Forms.TextBox();
             this.add_btn = new System.Windows.Forms.Button();
             this.headerpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -59,6 +59,21 @@
             this.headerpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.headerpanel_MouseDown);
             this.headerpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.headerpanel_MouseMove);
             this.headerpanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.headerpanel_MouseUp);
+            // 
+            // minimized_lbl
+            // 
+            this.minimized_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimized_lbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimized_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.minimized_lbl.Location = new System.Drawing.Point(682, 9);
+            this.minimized_lbl.Name = "minimized_lbl";
+            this.minimized_lbl.Size = new System.Drawing.Size(29, 34);
+            this.minimized_lbl.TabIndex = 3;
+            this.minimized_lbl.Text = "-";
+            this.minimized_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.minimized_lbl.Click += new System.EventHandler(this.Minimized_Click);
+            this.minimized_lbl.MouseEnter += new System.EventHandler(this.lableColor_MouseEnter);
+            this.minimized_lbl.MouseLeave += new System.EventHandler(this.lableColor_MouseLeave);
             // 
             // exit_lbl
             // 
@@ -84,21 +99,6 @@
             this.tool_lbl.Size = new System.Drawing.Size(270, 33);
             this.tool_lbl.TabIndex = 1;
             this.tool_lbl.Text = "Create new thread";
-            // 
-            // minimized_lbl
-            // 
-            this.minimized_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimized_lbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimized_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.minimized_lbl.Location = new System.Drawing.Point(682, 9);
-            this.minimized_lbl.Name = "minimized_lbl";
-            this.minimized_lbl.Size = new System.Drawing.Size(29, 34);
-            this.minimized_lbl.TabIndex = 3;
-            this.minimized_lbl.Text = "-";
-            this.minimized_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.minimized_lbl.Click += new System.EventHandler(this.Minimized_Click);
-            this.minimized_lbl.MouseEnter += new System.EventHandler(this.lableColor_MouseEnter);
-            this.minimized_lbl.MouseLeave += new System.EventHandler(this.lableColor_MouseLeave);
             // 
             // title_txtBox
             // 
@@ -134,16 +134,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(758, 287);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // message_txtBtn
-            // 
-            this.message_txtBtn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.message_txtBtn.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.message_txtBtn.Location = new System.Drawing.Point(153, 73);
-            this.message_txtBtn.Multiline = true;
-            this.message_txtBtn.Name = "message_txtBtn";
-            this.message_txtBtn.Size = new System.Drawing.Size(373, 142);
-            this.message_txtBtn.TabIndex = 4;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -170,6 +160,16 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Message: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // message_txtBtn
+            // 
+            this.message_txtBtn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.message_txtBtn.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.message_txtBtn.Location = new System.Drawing.Point(153, 73);
+            this.message_txtBtn.Multiline = true;
+            this.message_txtBtn.Name = "message_txtBtn";
+            this.message_txtBtn.Size = new System.Drawing.Size(373, 142);
+            this.message_txtBtn.TabIndex = 4;
             // 
             // add_btn
             // 

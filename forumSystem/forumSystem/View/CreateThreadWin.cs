@@ -15,9 +15,12 @@ namespace forumSystem.View
     {
         int togMove, valX, valY;
         IController myController;
-        public CreateThreadWin(IController control)
+        string forumName, subForumName;
+        public CreateThreadWin(IController control, string forum, string subForum)
         {
             myController = control;
+            forumName = forum;
+            subForumName = subForum;
             InitializeComponent();
         }
 
@@ -57,7 +60,14 @@ namespace forumSystem.View
                 MessageBox.Show("First enter title and message!");
                 return;
             }
-            //myController.
+            if(! myController.createThread(forumName, subForumName, title, message))
+            {
+                MessageBox.Show("'" + title+"' - thread name already exists!");
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void headerpanel_MouseMove(object sender, MouseEventArgs e)
