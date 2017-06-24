@@ -21,7 +21,8 @@ namespace forumSystem.model
             this.subject = subject;
             threads = new Dictionary<string, Thread>();
             moderators = new Dictionary<string, Moderator>();
-            moderators.Add(moderator.getUserName(), moderator);
+            if (null != moderator)
+                moderators.Add(moderator.getUserName(), moderator);
         }
 
         public void createThread(string title, string content, IObserver postedBy)

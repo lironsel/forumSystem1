@@ -25,18 +25,18 @@ namespace forumSystem
         [JsonProperty] private string sex;
         [JsonProperty] bool m_active;
 
-        public User(string name, string password)
+        public User(string userName, string password)
         {
             m_active = true;
-            m_userName = name;
+            m_userName = userName;
             m_password = password;
         }
 
-        public User(string userName, string password, string name, string birthday, string sex) : this(name, password)
+        public User(string userName, string password, string name, string birthday, string sex) : this(userName, password)
         {
-            this.m_userName = userName;
+            //this.m_userName = userName;
             this.m_name = name;
-            this.m_password = password;
+            //this.m_password = password;
             this.birthday = birthday;
             this.sex = sex;
         }
