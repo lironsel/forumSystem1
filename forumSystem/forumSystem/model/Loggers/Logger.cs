@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace forumSystem.model
 {
+    [JsonObject]
     class Logger
     {
-        private string log;
-        private string path;
+        [JsonProperty] private string log;
+        [JsonProperty] private string path;
 
         public Logger(string path)
         {

@@ -1,5 +1,9 @@
-﻿namespace forumSystem.model
+﻿using Newtonsoft.Json;
+using System;
+
+namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public abstract class AUser : IObserver
     {
         public abstract string getUserName();

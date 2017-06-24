@@ -1,19 +1,21 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public class ThreadMessage
     {
-        Thread assembling;
-        string title;
-        string content;
-        IObserver posted_by;
-        ThreadMessage replied_on;
-        List<ThreadMessage> commented_on_it;
-        DateTime createDate;
+        [JsonProperty] Thread assembling;
+        [JsonProperty] string title;
+        [JsonProperty] string content;
+        [JsonProperty] User posted_by;
+        [JsonProperty] ThreadMessage replied_on;
+        [JsonProperty] List<ThreadMessage> commented_on_it;
+        [JsonProperty] DateTime createDate;
 
-        public ThreadMessage(Thread belongsTo, string title, IObserver postedBy, string content, ThreadMessage repliedOn)
+        public ThreadMessage(Thread belongsTo, string title, User postedBy, string content, ThreadMessage repliedOn)
         {
             assembling = belongsTo;
             this.title = title;
@@ -24,8 +26,8 @@ namespace forumSystem.model
             commented_on_it = new List<ThreadMessage>();
         }
 
-        public string getMessageRepliedOn() { return replied_on.title; }
-
+        public string getMessageRepliedOn() { try { return replied_on.title; } catch { return null; } }
+         
         internal string getPublishDate()
         {
             return createDate.ToString();

@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public class Admin : User
     {
-        List<Forum> admin;
+        [JsonProperty]
+        List<string> forumsAdmined;
         public Admin(string name, string password) : base(name, password) { }
     }
 }

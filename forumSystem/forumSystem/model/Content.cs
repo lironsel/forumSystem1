@@ -1,9 +1,13 @@
-﻿namespace forumSystem.model
+﻿using Newtonsoft.Json;
+using System;
+
+namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     class Content
     {
         ThreadMessage assembling;
-        private string content;
+        [JsonProperty] private string content;
 
         public void putContent(string content)
         {

@@ -1,26 +1,29 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public class Thread : IObserveable
     {
         SubForum assembling;
-        List<ThreadMessage> messages;
-        List<IObserver> observers;
+        [JsonProperty] List<ThreadMessage> messages;
+        [JsonProperty] List<User> observers;
 
-        public Thread(SubForum belongsTo, IObserver user, string title, string content)
+        public Thread(SubForum belongsTo, IObserver userToAdd, string title, string content)
         {
+            User user = (User)userToAdd;
             assembling = belongsTo;
             messages = new List<ThreadMessage>();
             messages.Add(new ThreadMessage(this, title, user, content, null));
-            observers = new List<IObserver>();
+            observers = new List<User>();
             observers.Add(user);
         }
 
         public void connectDisToUser(string user) { }
         public void searchThread(string ThreadID) { }
-        public void addResponseMessage(string content, string title, IObserver user, ThreadMessage repliedOn = null)
+        public void addResponseMessage(string content, string title, User user, ThreadMessage repliedOn = null)
         {
             messages.Add(new ThreadMessage(this, title, user, content, repliedOn));
             addObserver(user);
@@ -30,18 +33,20 @@ namespace forumSystem.model
 
         public void addObserver(IObserver observer)
         {
-            if (!observers.Contains(observer))
+            User user = (User)observer;
+            if (!observers.Contains(user))
             {
-                observers.Add(observer);
+                observers.Add(user);
             }
             else Console.WriteLine("ERROR - USERS IS ALREADY AN OBSERVER"); //TODO: change to error logger
         }
 
         public void removeObserver(IObserver observer)
         {
-            if (observers.Contains(observer))
+            User user = (User)observer;
+            if (observers.Contains(user))
             {
-                observers.Remove(observer);
+                observers.Remove(user);
             }
             else Console.WriteLine("ERROR - USERS IS NOT AN OBSERVER AND CANNOT BE REMOVED"); //TODO: change to error logger
         }

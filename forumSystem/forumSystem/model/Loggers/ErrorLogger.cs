@@ -1,12 +1,16 @@
-﻿namespace forumSystem.model
+﻿using Newtonsoft.Json;
+using System;
+
+namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     class ErrorLogger : Logger
     {
-        Forum belong_to;
+        string forumName;
         
-        public ErrorLogger(Forum forum) : base(forum.getName() + "_Error.txt")
+        public ErrorLogger(string name) : base(name + "_Error.txt")
         {
-            belong_to = forum;
+            forumName = name;
         }
     }
 }

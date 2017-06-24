@@ -1,12 +1,17 @@
-﻿namespace forumSystem.model
+﻿using Newtonsoft.Json;
+using System;
+
+namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     class ActionLogger : Logger
     {
-        Forum belong_to2;
+        [JsonProperty]
+        string forumName;
 
-        public ActionLogger(Forum forum) : base(forum.getName() + "_Action.txt")
+        public ActionLogger(string name) : base(name + "_Action.txt")
         {
-            belong_to2 = forum;
+            forumName = name;
         }
     }
 }

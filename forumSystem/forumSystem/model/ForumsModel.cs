@@ -2,20 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Newtonsoft.Json;
 
 namespace forumSystem.Model
 {
     class ForumsModel
     {
         private static ForumsModel instance = null;
-        private AUser connectedUser;
-        Dictionary<string, Forum> forums;
+        private User connectedUser;
+        [JsonProperty] Dictionary<string, Forum> forums;
 
         private ForumsModel()
         {
             forums = new Dictionary<string, Forum>();
             loadForums();
-            /*TEST ONLY*/createTestData();
+            /*TEST ONLY*///createTestData();
         }
 
         public static ForumsModel Instance
@@ -49,6 +50,7 @@ namespace forumSystem.Model
             createSubForum("Main Forum", "Second Sub Forum", moderator);
             mainForum.createUser("AdarOv", "1234", "Adar Ovadya", "12/34/56", "Female");
             mainForum.createUser("LironAv", "1234", "Liron Avraham", "12/34/56", "Male");
+            exit();
         }
 
         internal bool signUp(string forum, string userName, string password, string name, string birthday, string sex)
@@ -74,7 +76,14 @@ namespace forumSystem.Model
 
         private void loadForums()
         {
-            //Load Forums List from JSON and build the forums Dictionary
+            var load = JsonConvert.DeserializeObject<Dictionary<string, Forum>>(System.IO.File.ReadAllText("data.json"));
+            forums = load;
+        }
+
+        public void exit()
+        {
+            var exit = JsonConvert.SerializeObject(forums);
+            System.IO.File.WriteAllText("data.json", exit);
         }
 
         internal List<string> enterForum(string forumName)

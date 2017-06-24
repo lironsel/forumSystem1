@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     class Group : IObserveable
     {
         Forum belong_to3;
-        List<Message> contain;
-        List<invitation> Invite;
-        List<IObserver> existent;
+        [JsonProperty] List<Message> contain;
+        [JsonProperty] List<invitation> Invite;
+        [JsonProperty] List<User> existent;
         public void getUsers() { }
         public void findGroup(string groupID) { }
         public void getGroup() { }
@@ -15,17 +18,19 @@ namespace forumSystem.model
 
         public void addObserver(IObserver observer)
         {
-            if (!existent.Contains(observer))
+            User user = (User)observer;
+            if (!existent.Contains(user))
             {
-                existent.Add(observer);
+                existent.Add(user);
             }
         }
 
         public void removeObserver(IObserver observer)
         {
-            if (existent.Contains(observer))
+            User user = (User)observer;
+            if (existent.Contains(user))
             {
-                existent.Remove(observer);
+                existent.Remove(user);
             }
         }
     }

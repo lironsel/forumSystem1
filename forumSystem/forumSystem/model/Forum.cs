@@ -1,18 +1,20 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public class Forum
     {
-        string name;
-        Policy policy;
-        ErrorLogger errorLogger;
-        ActionLogger actionLogger;
-        Dictionary<string, SubForum> subForums;
-        Dictionary<string, Admin> admins;
-        Dictionary<string, User> users;
-        Dictionary<string, Group> groups;
+        [JsonProperty] string name;
+        [JsonProperty] Policy policy;
+        [JsonProperty] ErrorLogger errorLogger;
+        [JsonProperty] ActionLogger actionLogger;
+        [JsonProperty] Dictionary<string, SubForum> subForums;
+        [JsonProperty] Dictionary<string, Admin> admins;
+        [JsonProperty] Dictionary<string, User> users;
+        [JsonProperty] Dictionary<string, Group> groups;
 
         internal string getName()
         {
@@ -27,8 +29,8 @@ namespace forumSystem.model
             groups = new Dictionary<string, Group>();
             subForums = new Dictionary<string, SubForum>();
             admins = new Dictionary<string, Admin>();
-            errorLogger = new ErrorLogger(this);
-            actionLogger = new ActionLogger(this);
+            errorLogger = new ErrorLogger(this.name);
+            actionLogger = new ActionLogger(this.name);
 
             try
             {

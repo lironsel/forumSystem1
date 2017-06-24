@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     class Notification
     {
-        DateTime _date;
-        string _data;
+        [JsonProperty] DateTime _date;
+        [JsonProperty] string _data;
 
         public Notification(string data)
         {

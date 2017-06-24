@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,19 +7,20 @@ using System.Threading.Tasks;
 
 namespace forumSystem.model
 {
+    [Serializable][JsonObject]
     public class SubForum : IObserveable
     {
         Forum assembling;
-        Dictionary<string, Thread> threads;
-        Dictionary<string, IObserver> moderators;
-        private string subject;
+        [JsonProperty] Dictionary<string, Thread> threads;
+        [JsonProperty] Dictionary<string, Moderator> moderators;
+        [JsonProperty] private string subject;
 
         public SubForum(Forum belongsTo, string subject, Moderator moderator)
         {
             assembling = belongsTo;
             this.subject = subject;
             threads = new Dictionary<string, Thread>();
-            moderators = new Dictionary<string, IObserver>();
+            moderators = new Dictionary<string, Moderator>();
             moderators.Add(moderator.getUserName(), moderator);
         }
 
@@ -54,8 +56,9 @@ namespace forumSystem.model
             return new List<string>(moderators.Keys);
         }
 
-        public void addModerator(IObserver moderator)
+        public void addModerator(IObserver observerModerator)
         {
+            Moderator moderator = (Moderator)observerModerator;
             if (!moderators.ContainsKey(moderator.getUserName()))
                 moderators.Add(moderator.getUserName(), moderator);
         }

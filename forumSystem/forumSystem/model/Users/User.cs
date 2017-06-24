@@ -1,27 +1,29 @@
 ﻿using forumSystem.model;
 using System.Collections.Generic;
 using System;
+using Newtonsoft.Json;
 
 namespace forumSystem
 {
+    [Serializable][JsonObject]
     public class User : AUser
     {
-        List<Complaint> complaints;
-        List<User> friend_of;
-        List<Group> included;
-        List<ThreadMessage> publish;
-        List<User> Friendly_with;
-        List<Message> send;
-        List<Notification> receive;
-        invitation received;
-        List<friendRequest> frined_request_to_others;
-        List<friendRequest> recive;
-        string m_name;
-        string m_password;
-        private string m_userName;
-        private string birthday;
-        private string sex;
-        bool m_active;
+        [JsonProperty] List<Complaint> complaints;
+        [JsonProperty] List<User> friend_of;
+        [JsonProperty] List<Group> included;
+        [JsonProperty] List<ThreadMessage> publish;
+        [JsonProperty] List<User> Friendly_with;
+        [JsonProperty] List<Message> send;
+        [JsonProperty] List<Notification> receive;
+        [JsonProperty] invitation received;
+        [JsonProperty] List<friendRequest> frined_request_to_others;
+        [JsonProperty] List<friendRequest> recive;
+        [JsonProperty] string m_name;
+        [JsonProperty] string m_password;
+        [JsonProperty] private string m_userName;
+        [JsonProperty] private string birthday;
+        [JsonProperty] private string sex;
+        [JsonProperty] bool m_active;
 
         public User(string name, string password)
         {
