@@ -23,14 +23,14 @@ namespace forumSystem.View
             level++;
             myControl = m;
             InitializeComponent();
-            Show_btn_Click();
+            showSubForumWindow();
         }
 
-        public void Show_btn_Click()
-        {
-            addListToListBox( myControl.getForums());  
-            visiblePanel(true);
-        }
+        //public void Show_btn_Click()
+        //{
+        //    addListToListBox( myControl.getForums());  
+        //   visiblePanel(true);
+        //}
 
 
         private void addListToListBox(List<string> list)
@@ -47,6 +47,7 @@ namespace forumSystem.View
         {
             CreateThreadWin window = new CreateThreadWin(myControl, forumName, subForumName);
             window.Show();
+            addListToListBox(myControl.enterSubForum(forumName, subForumName));
         }
 
         private void complaint_btn_Click(object sender, EventArgs e)
@@ -72,20 +73,22 @@ namespace forumSystem.View
             switch (level)
             {
                 //forums list
-                case 0:
-                    forumName = selectedItem;
-                    addListToListBox(myControl.enterForum(forumName));
-                    list_lbl.Text = forumName;
-                    label1.Text = "Choose sub forum and press 'Show' ";
-                    level++;
-                    break;
+                //case 0:
+                //    forumName = selectedItem;
+                //    addListToListBox(myControl.enterForum(forumName));
+                //    list_lbl.Text = forumName;
+                //    label1.Text = "Choose sub forum and press 'Show' ";
+                //    level++;
+                //    break;
+
                 //sub forums list
                 case 1:
                     subForumName = selectedItem;
                     addListToListBox(myControl.enterSubForum(forumName, subForumName));
-                    list_lbl.Text = forumName+"\\"+subForumName;
+                    list_lbl.Text = forumName + "\\" + subForumName;
                     label1.Text = "Choose thread and press 'Show' ";
                     addThread_btn.Visible = true;
+                    complaint_btn.Visible = true;
                     level++;
                     break;
                 //threads list
@@ -98,6 +101,15 @@ namespace forumSystem.View
                     forumList_panel.Controls.Add(thredPanel);
                     break;
             }
+        }
+
+        private void showSubForumWindow()
+        {
+            //forumName = selectedItem;
+            addListToListBox(myControl.enterForum(forumName));
+            list_lbl.Text = forumName;
+            label1.Text = "Choose sub forum and press 'Show' ";
+            //level++;
         }
     }
 }

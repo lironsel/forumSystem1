@@ -17,12 +17,12 @@ namespace forumSystem.View
         string forumName, subForumName, threadName;
         public ThreadPanel(IController control, string forum, string subForum, string thread)
         {
+            InitializeComponent();
             myControl = control;
             forumName = forum;
             subForumName = subForum;
             threadName = thread;
             list_lbl.Text = forumName + "\\" + subForumName + "\\" + threadName;
-            InitializeComponent();
         }
 
         private void title_txt_Click(object sender, EventArgs e)

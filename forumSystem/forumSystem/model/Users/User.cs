@@ -26,7 +26,7 @@ namespace forumSystem
         public User(string name, string password)
         {
             m_active = true;
-            m_name = name;
+            m_userName = name;
             m_password = password;
         }
 

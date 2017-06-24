@@ -35,7 +35,7 @@ namespace forumSystem.model
                 admins.Add(admin.getUserName(), admin);
                 users.Add(admin.getUserName(), admin);
             }
-            catch { errorLogger.Log("ERROR ADDING ADMIN"); }
+            catch (Exception e){ errorLogger.Log("ERROR ADDING ADMIN"); }
         }
 
         internal bool login(string userName, string password)

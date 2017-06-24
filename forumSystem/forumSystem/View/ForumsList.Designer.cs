@@ -33,10 +33,10 @@
             this.list_lbl = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
             this.forumList_panel = new System.Windows.Forms.Panel();
+            this.complaint_btn = new System.Windows.Forms.Button();
             this.addThread_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.show_btn = new System.Windows.Forms.Button();
-            this.complaint_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.forumList_panel.SuspendLayout();
@@ -110,6 +110,22 @@
             this.forumList_panel.Size = new System.Drawing.Size(973, 519);
             this.forumList_panel.TabIndex = 4;
             // 
+            // complaint_btn
+            // 
+            this.complaint_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.complaint_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.complaint_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.complaint_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.complaint_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.complaint_btn.Location = new System.Drawing.Point(412, 430);
+            this.complaint_btn.Name = "complaint_btn";
+            this.complaint_btn.Size = new System.Drawing.Size(165, 62);
+            this.complaint_btn.TabIndex = 44;
+            this.complaint_btn.Text = "File a complaint";
+            this.complaint_btn.UseVisualStyleBackColor = false;
+            this.complaint_btn.Visible = false;
+            this.complaint_btn.Click += new System.EventHandler(this.complaint_btn_Click);
+            // 
             // addThread_btn
             // 
             this.addThread_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -152,21 +168,6 @@
             this.show_btn.Text = "Show";
             this.show_btn.UseVisualStyleBackColor = false;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
-            // 
-            // complaint_btn
-            // 
-            this.complaint_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.complaint_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.complaint_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.complaint_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.complaint_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.complaint_btn.Location = new System.Drawing.Point(412, 430);
-            this.complaint_btn.Name = "complaint_btn";
-            this.complaint_btn.Size = new System.Drawing.Size(165, 62);
-            this.complaint_btn.TabIndex = 44;
-            this.complaint_btn.Text = "File a complaint";
-            this.complaint_btn.UseVisualStyleBackColor = false;
-            this.complaint_btn.Click += new System.EventHandler(this.complaint_btn_Click);
             // 
             // ForumsList
             // 
