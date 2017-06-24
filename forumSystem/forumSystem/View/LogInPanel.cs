@@ -14,7 +14,6 @@ namespace forumSystem.View
             InitializeComponent();
             myControl = c;
             password_txtbox.PasswordChar = '*';
-            //forumList = new ComboBox();
             updateForumList();
         }
 
@@ -29,24 +28,19 @@ namespace forumSystem.View
             if (myControl.Login(forum, email_txtbox.Text, password_txtbox.Text))
             {
                 logIn_panel.Controls.Clear();
-                logIn_panel.Controls.Add(new ForumsList(myControl));
+                logIn_panel.Controls.Add(new ForumsList(myControl, forum));
             }
             else
             {
                 email_txtbox.Text = "";
                 password_txtbox.Text = "";
-                MessageBox.Show("User doesnt exists!", "EROR");
+                MessageBox.Show("User doesnt exists in this forum!", "EROR");
             }            
         }
 
         private void updateForumList()
         {
-            List<string> forums = myControl.getForums();
-            forumList.DataSource = forums;
-            //foreach(string forum in forums)
-            //{
-            //    forumList.Items.Add(forum);
-            //}
+            forumList.DataSource = myControl.getForums();
         }
     }
 }

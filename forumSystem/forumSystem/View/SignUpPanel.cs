@@ -26,7 +26,7 @@ namespace forumSystem.View
             if(myControl.SignUp(forum, email_textBox.Text, password_textBox.Text, name_textBox.Text, birthday_textBox.Text, sex_textBox.Text))
             {               
                 signIn_panel.Controls.Clear();
-                signIn_panel.Controls.Add(new ForumsList(myControl));                
+                signIn_panel.Controls.Add(new ForumsList(myControl, forum));                
             }
             else
             {
@@ -57,12 +57,7 @@ namespace forumSystem.View
 
         private void updateForumList()
         {
-            List<string> forums = myControl.getForums();
-            forumList.DataSource = forums;
-            //foreach (string forum in forums)
-            //{
-            //    forumList.Items.Add(forum);
-            //}
+            forumList.DataSource = myControl.getForums();
         }
 
     }

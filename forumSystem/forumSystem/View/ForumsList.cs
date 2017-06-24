@@ -17,8 +17,10 @@ namespace forumSystem.View
         int level = 0;
         private IController myControl;
 
-        public ForumsList(IController m)
+        public ForumsList(IController m, string forum)
         {
+            forumName = forum;
+            level++;
             myControl = m;
             InitializeComponent();
             Show_btn_Click();
@@ -45,6 +47,12 @@ namespace forumSystem.View
         {
             CreateThreadWin window = new CreateThreadWin(myControl, forumName, subForumName);
             window.Show();
+        }
+
+        private void complaint_btn_Click(object sender, EventArgs e)
+        {
+            ComplainWindow complainWindow = new ComplainWindow(myControl, forumName, subForumName);
+            complainWindow.Show();
         }
 
         private void visiblePanel(bool visible)

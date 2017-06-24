@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.list_lbl = new System.Windows.Forms.Label();
@@ -39,11 +41,11 @@
             this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Feedback = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thread_panel = new System.Windows.Forms.Panel();
+            this.title_txt = new System.Windows.Forms.TextBox();
             this.commit = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.send_btn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.title_txt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -97,7 +99,20 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Publish_Date,
@@ -149,6 +164,17 @@
             this.Thread_panel.Size = new System.Drawing.Size(973, 519);
             this.Thread_panel.TabIndex = 4;
             // 
+            // title_txt
+            // 
+            this.title_txt.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.title_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.title_txt.Location = new System.Drawing.Point(19, 395);
+            this.title_txt.Name = "title_txt";
+            this.title_txt.Size = new System.Drawing.Size(141, 24);
+            this.title_txt.TabIndex = 44;
+            this.title_txt.Text = "Title";
+            this.title_txt.Click += new System.EventHandler(this.title_txt_Click);
+            // 
             // commit
             // 
             this.commit.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -190,17 +216,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // title_txt
-            // 
-            this.title_txt.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.title_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.title_txt.Location = new System.Drawing.Point(19, 395);
-            this.title_txt.Name = "title_txt";
-            this.title_txt.Size = new System.Drawing.Size(141, 24);
-            this.title_txt.TabIndex = 44;
-            this.title_txt.Text = "Title";
-            this.title_txt.Click += new System.EventHandler(this.title_txt_Click);
             // 
             // ThreadPanel
             // 

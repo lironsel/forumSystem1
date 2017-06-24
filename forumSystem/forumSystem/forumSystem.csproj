@@ -59,6 +59,12 @@
     <Compile Include="View\AboutPanel.Designer.cs">
       <DependentUpon>AboutPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ComplainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ComplainWindow.Designer.cs">
+      <DependentUpon>ComplainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CreateThreadWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="View\AboutPanel.resx">
       <DependentUpon>AboutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ComplainWindow.resx">
+      <DependentUpon>ComplainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CreateThreadWin.resx">
       <DependentUpon>CreateThreadWin.cs</DependentUpon>
