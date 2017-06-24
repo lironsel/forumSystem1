@@ -66,6 +66,7 @@ namespace forumSystem.View
             }
             else
             {
+                MessageBox.Show("Thread successfully added");
                 this.Close();
             }
         }

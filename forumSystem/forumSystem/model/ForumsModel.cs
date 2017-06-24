@@ -35,7 +35,12 @@ namespace forumSystem.Model
         {
             try
             {
-                return forums[forum].login(userName, password);
+                connectedUser = forums[forum].login(userName, password);
+                if(null == connectedUser)
+                {
+                    return false;
+                }
+                return true;
             }
             catch { return false; }
         }
@@ -57,7 +62,12 @@ namespace forumSystem.Model
         {
             try
             {
-                return forums[forum].createUser(userName, password, name, birthday, sex);
+                connectedUser = forums[forum].createUser(userName, password, name, birthday, sex);
+                if (null == connectedUser)
+                {
+                    return false;
+                }
+                return true;
             }
             catch { return false; }
         }

@@ -37,6 +37,8 @@
             this.addThread_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.show_btn = new System.Windows.Forms.Button();
+            this.refresh_btn = new System.Windows.Forms.Button();
+            this.back_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.forumList_panel.SuspendLayout();
@@ -57,8 +59,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.421F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7895F));
-            this.tableLayoutPanel1.Controls.Add(this.list_lbl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.list_lbl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.listBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.refresh_btn, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.back_btn, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -75,12 +79,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.list_lbl.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.list_lbl, 2);
             this.list_lbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.list_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.list_lbl.Location = new System.Drawing.Point(3, 0);
+            this.list_lbl.Location = new System.Drawing.Point(163, 0);
             this.list_lbl.Name = "list_lbl";
-            this.list_lbl.Size = new System.Drawing.Size(788, 36);
+            this.list_lbl.Size = new System.Drawing.Size(628, 36);
             this.list_lbl.TabIndex = 43;
             this.list_lbl.Text = "Forums";
             this.list_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -169,6 +172,40 @@
             this.show_btn.UseVisualStyleBackColor = false;
             this.show_btn.Click += new System.EventHandler(this.show_btn_Click);
             // 
+            // refresh_btn
+            // 
+            this.refresh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.refresh_btn.BackgroundImage = global::forumSystem.Properties.Resources.refresh;
+            this.refresh_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.refresh_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refresh_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.refresh_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.refresh_btn.Location = new System.Drawing.Point(3, 39);
+            this.refresh_btn.Name = "refresh_btn";
+            this.refresh_btn.Size = new System.Drawing.Size(60, 41);
+            this.refresh_btn.TabIndex = 44;
+            this.refresh_btn.UseVisualStyleBackColor = false;
+            this.refresh_btn.Visible = false;
+            this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
+            // 
+            // back_btn
+            // 
+            this.back_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.back_btn.BackgroundImage = global::forumSystem.Properties.Resources.backIcon;
+            this.back_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.back_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.back_btn.Location = new System.Drawing.Point(3, 3);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(60, 30);
+            this.back_btn.TabIndex = 45;
+            this.back_btn.UseVisualStyleBackColor = false;
+            this.back_btn.Visible = false;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // ForumsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +233,7 @@
         private System.Windows.Forms.Label list_lbl;
         private System.Windows.Forms.Button addThread_btn;
         private System.Windows.Forms.Button complaint_btn;
+        private System.Windows.Forms.Button refresh_btn;
+        private System.Windows.Forms.Button back_btn;
     }
 }

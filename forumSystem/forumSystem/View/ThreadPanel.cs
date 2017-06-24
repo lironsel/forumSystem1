@@ -23,6 +23,7 @@ namespace forumSystem.View
             subForumName = subForum;
             threadName = thread;
             list_lbl.Text = forumName + "\\" + subForumName + "\\" + threadName;
+            dataGridView.DataSource = myControl.enterThread(forumName, subForumName, threadName);
         }
 
         private void title_txt_Click(object sender, EventArgs e)
@@ -47,7 +48,6 @@ namespace forumSystem.View
                 title_txt.Text = "Title";
                 commit.Text = "Commit..";
                 dataGridView.DataSource = myControl.enterThread(forumName, subForumName, threadName);
-                MessageBox.Show("A message added successfully");
             }
         }
     }
