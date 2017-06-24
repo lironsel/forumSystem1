@@ -19,11 +19,11 @@ namespace forumSystem.View
 
         public ForumsList(IController m, string forum)
         {
-            forumName = forum;
-            level++;
-            myControl = m;
             InitializeComponent();
-            showSubForumWindow();
+            forumName = forum;
+            myControl = m;
+            changePanel();
+            //level++;            
         }
 
         //public void Show_btn_Click()
@@ -57,6 +57,17 @@ namespace forumSystem.View
             show_btn.Visible = visible;
         }
 
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            //if(level == 2)
+            //{
+            //    ForumsList forumList = new ForumsList(myControl, forumName);
+                
+            //}
+            level--;
+            changePanel();
+        }
+
         private void show_btn_Click(object sender, EventArgs e)
         {
             if (listBox.SelectedItems.Count != 1)
@@ -64,47 +75,61 @@ namespace forumSystem.View
                 MessageBox.Show("Please choose one item and then press 'Show' again");
                 return;
             }
+            level++;
             string selectedItem = listBox.SelectedItem.ToString();
             switch (level)
             {
-                //forums list
-                //case 0:
-                //    forumName = selectedItem;
-                //    addListToListBox(myControl.enterForum(forumName));
-                //    list_lbl.Text = forumName;
-                //    label1.Text = "Choose sub forum and press 'Show' ";
-                //    level++;
-                //    break;
-
-                //sub forums list
                 case 1:
                     subForumName = selectedItem;
+                    break;
+                case 2:
+                    threadName = selectedItem;
+                    break; ;
+            }
+            changePanel();
+            
+        }
+
+        private void refresh_btn_Click(object sender, EventArgs e)
+        {
+            addListToListBox(myControl.enterSubForum(forumName, subForumName));
+        }
+
+        private void changePanel()
+        {
+            switch (level)
+            {
+                //sub forums list
+                case 0:
+                    addListToListBox(myControl.enterForum(forumName));
+                    list_lbl.Text = forumName;
+                    label1.Text = "Choose sub forum and press 'Show' ";
+                    btnInThreadPanel(false);
+                    break;
+
+                //threads list
+                case 1:                    
                     addListToListBox(myControl.enterSubForum(forumName, subForumName));
                     list_lbl.Text = forumName + "\\" + subForumName;
                     label1.Text = "Choose thread and press 'Show' ";
-                    addThread_btn.Visible = true;
-                    complaint_btn.Visible = true;
-                    level++;
+                    btnInThreadPanel(true);
                     break;
-                //threads list
-                case 2:
-                    threadName = selectedItem;
-                    //list_lbl.Text = forumName + "\\" + subForumName;
-                    ThreadPanel thredPanel = new ThreadPanel(myControl, forumName, subForumName, threadName);
-                    level++;
+
+                //messages list
+                case 2:                    
+                    ThreadPanel thredPanel = new ThreadPanel(myControl, forumName, subForumName, threadName);                    
                     forumList_panel.Controls.Clear();
                     forumList_panel.Controls.Add(thredPanel);
                     break;
             }
         }
 
-        private void showSubForumWindow()
+        private void btnInThreadPanel(bool visible)
         {
-            //forumName = selectedItem;
-            addListToListBox(myControl.enterForum(forumName));
-            list_lbl.Text = forumName;
-            label1.Text = "Choose sub forum and press 'Show' ";
-            //level++;
+            addThread_btn.Visible = visible;
+            complaint_btn.Visible = visible;
+            back_btn.Visible = visible;
+            refresh_btn.Visible = visible;
         }
     }
 }
