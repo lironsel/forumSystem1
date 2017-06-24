@@ -40,7 +40,7 @@ namespace forumSystem.model
             catch (Exception e){ errorLogger.Log("ERROR ADDING ADMIN"); }
         }
 
-        internal AUser login(string userName, string password)
+        internal User login(string userName, string password)
         {
             if (users.ContainsKey(userName))
             {
@@ -71,7 +71,7 @@ namespace forumSystem.model
 
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
 
-        internal AUser createUser(string userName, string password, string name, string birthday, string sex)
+        internal User createUser(string userName, string password, string name, string birthday, string sex)
         {
             try
             {
