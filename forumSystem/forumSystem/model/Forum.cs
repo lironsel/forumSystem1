@@ -38,13 +38,15 @@ namespace forumSystem.model
             catch (Exception e){ errorLogger.Log("ERROR ADDING ADMIN"); }
         }
 
-        internal bool login(string userName, string password)
+        internal AUser login(string userName, string password)
         {
             if (users.ContainsKey(userName))
             {
-                return users[userName].chackIfPassword(password);
+                if (users[userName].chackIfPassword(password))
+                    return users[userName];
+                return null;
             }
-            else return false;
+            else return null;
         }
 
         internal void addUserTEST_ONLY(User user)
@@ -67,14 +69,15 @@ namespace forumSystem.model
 
         public void deleteModerator(string forumID, string subForumID, string moderatorID) { }
 
-        internal bool createUser(string userName, string password, string name, string birthday, string sex)
+        internal AUser createUser(string userName, string password, string name, string birthday, string sex)
         {
             try
             {
-                users.Add(userName, new User(userName, password, name, birthday, sex));
-                return true;
+                User user = new User(userName, password, name, birthday, sex);
+                users.Add(userName, user);
+                return user;
             }
-            catch { return false; }
+            catch { return null; }
         }
 
         internal bool addSubForum(Forum forum, string subForumName, Moderator moderator)

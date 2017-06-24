@@ -35,12 +35,7 @@ namespace forumSystem.View
 
         private void addListToListBox(List<string> list)
         {
-            listBox.Items.Clear();
-            if (null == list) return;
-            foreach(string item in list)
-            {
-                listBox.Items.Add(item);
-            }
+            listBox.DataSource = list;
         }
 
         private void addThread_btn_Click(object sender, EventArgs e)
