@@ -4,7 +4,7 @@ using System;
 namespace forumSystem.model
 {
     [Serializable][JsonObject]
-    class Complaint
+    public class Complaint
     {
         [JsonProperty] string refers_to;
         [JsonProperty] string submitted_by;

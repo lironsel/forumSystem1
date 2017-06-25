@@ -9,15 +9,14 @@ namespace forumSystem
     public class User : AUser
     {
         [JsonProperty] List<Complaint> complaints;
-        [JsonProperty] List<User> friend_of;
-        [JsonProperty] List<Group> included;
+        //[JsonProperty] List<User> friend_of;
+        //[JsonProperty] List<Group> included;
         [JsonProperty] List<ThreadMessage> publish;
-        [JsonProperty] List<User> Friendly_with;
-        [JsonProperty] List<Message> send;
-        [JsonProperty] List<Notification> receive;
-        [JsonProperty] invitation received;
-        [JsonProperty] List<friendRequest> frined_request_to_others;
-        [JsonProperty] List<friendRequest> recive;
+        //[JsonProperty] List<Message> send;
+        [JsonProperty] List<Notification> notifications;
+        //[JsonProperty] invitation received;
+        //[JsonProperty] List<friendRequest> frined_request_to_others;
+        //[JsonProperty] List<friendRequest> recive;
         [JsonProperty] string m_name;
         [JsonProperty] string m_password;
         [JsonProperty] private string m_userName;
@@ -39,7 +38,33 @@ namespace forumSystem
             //this.m_password = password;
             this.birthday = birthday;
             this.sex = sex;
+            complaints = new List<Complaint>();
+            //friend_of = new List<User>();
+            //included = new List<Group>();
+            publish = new List<ThreadMessage>();
+            //send = new List<Message>();
+            notifications = new List<Notification>();
+            m_active = true;
         }
+
+        [JsonConstructor]
+		public User(string userName, string password, string name, string birthday, string sex, List<Complaint> userComplaints) : this(userName, password)
+		{
+			//this.m_userName = userName;
+			this.m_name = name;
+			//this.m_password = password;
+			this.birthday = birthday;
+			this.sex = sex;
+			//friend_of = new List<User>();
+			//included = new List<Group>();
+			publish = new List<ThreadMessage>();
+			//send = new List<Message>();
+			notifications = new List<Notification>();
+			m_active = true;
+            if (null != userComplaints)
+                complaints = new List<Complaint>(userComplaints);
+            else complaints = new List<Complaint>();
+		}
 
         public void creatInvitation() { }
         public void updateMessage(string messageID, string newContent, string newTitle) { }
@@ -70,7 +95,7 @@ namespace forumSystem
 
         public override void notify(string data)
         {
-            receive.Add(new Notification(data));
+            notifications.Add(new Notification(data));
         }
 
         public override string getUserName()

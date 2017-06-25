@@ -92,8 +92,8 @@ namespace forumSystem.Model
 
         public void exit()
         {
-            var exit = JsonConvert.SerializeObject(forums);
-            System.IO.File.WriteAllText("data.json", exit);
+            var fin = JsonConvert.SerializeObject(forums);
+            System.IO.File.WriteAllText("data.json", fin);
         }
 
         internal List<string> enterForum(string forumName)
