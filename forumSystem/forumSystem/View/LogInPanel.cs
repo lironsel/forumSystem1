@@ -34,7 +34,7 @@ namespace forumSystem.View
             {
                 email_txtbox.Text = "";
                 password_txtbox.Text = "";
-                MessageBox.Show("User doesnt exists in this forum!", "EROR");
+                MessageBox.Show("Wrong Login information, please try again", "ERROR");
             }            
         }
 

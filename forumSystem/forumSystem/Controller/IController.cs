@@ -18,5 +18,6 @@ namespace forumSystem.Controller
         void complainOnModerator(string forum, string subForum, string moderatorId, string complaint);
         List<string> getSubForumModerators(string forum, string subForum);
         List<string> getAdmins(string forum);
+        void exit();
     }
 }

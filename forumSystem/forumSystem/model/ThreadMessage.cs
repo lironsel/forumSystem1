@@ -35,7 +35,7 @@ namespace forumSystem.model
 
         internal string getPublisher()
         {
-            return posted_by.getName();
+            return posted_by.getUserName();
         }
 
         internal string getTitle()

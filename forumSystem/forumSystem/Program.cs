@@ -7,7 +7,7 @@ using forumSystem.Model;
 namespace forumSystem
 {
     static class Program
-    {
+    { 
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -20,6 +20,11 @@ namespace forumSystem
             ForumSystem fs = ForumSystem.Instance;
             fs.setControl(controller);
             Application.Run(fs);
+        }
+
+        static void OnProcessExit(object sender, EventArgs e)
+        {
+            //TODO: bom
         }
     }
 }

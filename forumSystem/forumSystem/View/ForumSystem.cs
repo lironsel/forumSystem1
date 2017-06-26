@@ -111,6 +111,7 @@ namespace forumSystem
 
         private void exit_lbl_Click(object sender, EventArgs e)
         {
+            myControl.exit();
             this.Close();
         }
 

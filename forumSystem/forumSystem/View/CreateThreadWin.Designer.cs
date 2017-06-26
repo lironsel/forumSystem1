@@ -96,7 +96,7 @@
             this.tool_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.tool_lbl.Location = new System.Drawing.Point(19, 24);
             this.tool_lbl.Name = "tool_lbl";
-            this.tool_lbl.Size = new System.Drawing.Size(270, 33);
+            this.tool_lbl.Size = new System.Drawing.Size(334, 40);
             this.tool_lbl.TabIndex = 1;
             this.tool_lbl.Text = "Create new thread";
             // 
@@ -106,7 +106,7 @@
             this.title_txtBox.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.title_txtBox.Location = new System.Drawing.Point(153, 31);
             this.title_txtBox.Name = "title_txtBox";
-            this.title_txtBox.Size = new System.Drawing.Size(171, 25);
+            this.title_txtBox.Size = new System.Drawing.Size(171, 30);
             this.title_txtBox.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -141,9 +141,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(104, 28);
+            this.label1.Location = new System.Drawing.Point(94, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 28);
+            this.label1.Size = new System.Drawing.Size(53, 28);
             this.label1.TabIndex = 43;
             this.label1.Text = "Title: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -154,9 +154,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(63, 70);
+            this.label2.Location = new System.Drawing.Point(46, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(101, 22);
             this.label2.TabIndex = 44;
             this.label2.Text = "Message: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,7 +188,7 @@
             // 
             // CreateThreadWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(758, 366);

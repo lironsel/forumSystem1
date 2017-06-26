@@ -79,5 +79,10 @@ namespace forumSystem.Controller
         {
             return model.createForum(name, adminName, adminPassword);
         }
+
+        public void exit()
+        {
+            model.exit();
+        }
     }
 }
