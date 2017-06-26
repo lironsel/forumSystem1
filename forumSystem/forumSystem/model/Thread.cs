@@ -8,6 +8,7 @@ namespace forumSystem.model
     public class Thread : IObserveable
     {
         SubForum assembling;
+        [JsonProperty] int feedbacks;
         [JsonProperty] List<ThreadMessage> messages;
         [JsonProperty] List<User> observers;
 
@@ -19,6 +20,7 @@ namespace forumSystem.model
             messages.Add(new ThreadMessage(this, title, user, content, null));
             observers = new List<User>();
             observers.Add(user);
+            feedbacks = 0;
         }
 
         public void connectDisToUser(string user) { }
@@ -27,6 +29,7 @@ namespace forumSystem.model
         {
             messages.Add(new ThreadMessage(this, title, user, content, repliedOn));
             addObserver(user);
+            feedbacks++;
         }
 
         public void changeCommentedOn(bool change) { }
@@ -55,5 +58,12 @@ namespace forumSystem.model
         {
             return messages;
         }
+
+        internal string getFeedbacks()
+        {
+            return (messages.Count - 1).ToString();
+        }
+
+        public void update() {}
     }
 }

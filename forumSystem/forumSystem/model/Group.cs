@@ -33,5 +33,7 @@ namespace forumSystem.model
                 existent.Remove(user);
             }
         }
+
+        public void update() {}
     }
 }

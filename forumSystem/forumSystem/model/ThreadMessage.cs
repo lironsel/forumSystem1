@@ -7,7 +7,7 @@ namespace forumSystem.model
     [Serializable][JsonObject]
     public class ThreadMessage
     {
-        [JsonProperty] Thread assembling;
+        Thread assembling;
         [JsonProperty] string title;
         [JsonProperty] string content;
         [JsonProperty] User posted_by;

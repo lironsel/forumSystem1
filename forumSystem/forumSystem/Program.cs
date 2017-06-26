@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using forumSystem.Controller;
-using forumSystem.Model;
 
 namespace forumSystem
 {

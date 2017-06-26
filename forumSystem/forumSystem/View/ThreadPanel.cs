@@ -24,6 +24,7 @@ namespace forumSystem.View
             threadName = thread;
             list_lbl.Text = forumName + "\\" + subForumName + "\\" + threadName;
             dataGridView.DataSource = myControl.enterThread(forumName, subForumName, threadName);
+            feedbacks.Text = "This thread has " + myControl.getThreadFeedbacks(forumName, subForumName, threadName) + " feedbacks";
         }
 
         private void title_txt_Click(object sender, EventArgs e)

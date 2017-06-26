@@ -16,6 +16,7 @@ namespace forumSystem.Controller
         bool addFeedback(string forum, string subForum, string threadTitle, string feedbackTitle, string feedbackMessage);
         bool createForum(string name, string adminName, string adminPassword);
         void complainOnModerator(string forum, string subForum, string moderatorId, string complaint);
+        string getThreadFeedbacks(string forumName, string subForumName, string threadName);
         List<string> getSubForumModerators(string forum, string subForum);
         List<string> getAdmins(string forum);
         void exit();

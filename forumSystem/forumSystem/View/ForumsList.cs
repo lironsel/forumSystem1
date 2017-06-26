@@ -43,6 +43,7 @@ namespace forumSystem.View
             CreateThreadWin window = new CreateThreadWin(myControl, forumName, subForumName);
             window.Show();
             addListToListBox(myControl.enterSubForum(forumName, subForumName));
+            refresh_btn.PerformClick();
         }
 
         private void complaint_btn_Click(object sender, EventArgs e)

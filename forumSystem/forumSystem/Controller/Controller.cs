@@ -84,5 +84,10 @@ namespace forumSystem.Controller
         {
             model.exit();
         }
+
+        public string getThreadFeedbacks(string forumName, string subForumName, string threadName)
+        {
+            return model.getThreadFeedbacks(forumName, subForumName, threadName);
+        }
     }
 }

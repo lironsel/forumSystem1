@@ -96,9 +96,9 @@
             this.tool_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.tool_lbl.Location = new System.Drawing.Point(19, 24);
             this.tool_lbl.Name = "tool_lbl";
-            this.tool_lbl.Size = new System.Drawing.Size(215, 33);
+            this.tool_lbl.Size = new System.Drawing.Size(275, 40);
             this.tool_lbl.TabIndex = 1;
-            this.tool_lbl.Text = "File a complain";
+            this.tool_lbl.Text = "File a complaint";
             // 
             // tableLayoutPanel1
             // 
@@ -108,11 +108,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.message_txtBtn, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.send_btn, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.moderetorList, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 79);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -130,11 +130,11 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(54, 28);
+            this.label1.Location = new System.Drawing.Point(49, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 28);
+            this.label1.Size = new System.Drawing.Size(98, 28);
             this.label1.TabIndex = 43;
             this.label1.Text = "Moderator:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -143,13 +143,13 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(64, 70);
+            this.label2.Location = new System.Drawing.Point(49, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(98, 19);
             this.label2.TabIndex = 44;
-            this.label2.Text = "Complain:";
+            this.label2.Text = "Complaint:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // message_txtBtn
@@ -183,12 +183,12 @@
             this.moderetorList.FormattingEnabled = true;
             this.moderetorList.Location = new System.Drawing.Point(153, 31);
             this.moderetorList.Name = "moderetorList";
-            this.moderetorList.Size = new System.Drawing.Size(200, 25);
+            this.moderetorList.Size = new System.Drawing.Size(200, 28);
             this.moderetorList.TabIndex = 46;
             // 
             // ComplainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(758, 366);

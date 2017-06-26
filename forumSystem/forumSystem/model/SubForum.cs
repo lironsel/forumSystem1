@@ -79,5 +79,10 @@ namespace forumSystem.model
         {
             addModerator(observer);
         }
+
+        public void update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

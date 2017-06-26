@@ -90,6 +90,18 @@ namespace forumSystem.Model
             forums = load;
         }
 
+        internal string getThreadFeedbacks(string forumName, string subForumName, string threadName)
+        {
+            try
+            {
+                Forum currentForum = forums[forumName];
+                SubForum currentSubForum = currentForum.searchSubForum(subForumName);
+                Thread thread = currentSubForum.searchThread(threadName);
+                return thread.getFeedbacks();
+            }
+            catch { return "0"; }
+        }
+
         public void exit()
         {
             var fin = JsonConvert.SerializeObject(forums);
